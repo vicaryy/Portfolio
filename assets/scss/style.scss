@@ -1,0 +1,60 @@
+@import "variables";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    
+    @media (min-width: 1000px) {
+        user-select:text;
+    } 
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: $bgc;
+    font-family: $font;
+}
+
+.content {
+    max-width: 1920px;
+    width: 100%;
+}
+
+section {
+    margin: 0 clamp(2.5rem, 10vw, 80rem);
+    font-family: $font;
+    color: $font-color;
+}
+
+.block {
+    height: 100px;
+    width: 100px;
+    background-color: $bgc-second;
+    border-radius: 15px
+}
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.relative {
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+@import "first-section";
+@import "second-section";

@@ -1,0 +1,46 @@
+.first-section {
+    overflow: hidden;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 60px;
+
+    p {
+        margin-bottom: 20px;
+        font-family: 'SF Mono', sans-serif;
+        font-weight: 400;
+        font-size: clamp(14px, 5vw, 16px);
+        color: $font-color-third;
+    }
+
+    h1 {
+        font-family: $font-second;
+        font-size: clamp(3.5rem, 7vw, 6rem);
+        color: $font-color;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: clamp(2.5rem, 4vw, 4.5rem);
+        color: $font-color-second;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+}
+
+.first-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bgc;
+    animation: slider 2s .3s ease-out forwards;
+}
+
+@keyframes slider {
+    to {
+        transform: translateX(100%);
+    }
+}
