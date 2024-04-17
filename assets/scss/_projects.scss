@@ -1,0 +1,14 @@
+.projects {
+
+    .projects-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 100%;
+        max-width: 800px;
+        background-color: rgba(0, 255, 255, .2);
+    }
+}

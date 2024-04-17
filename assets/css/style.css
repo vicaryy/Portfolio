@@ -39,7 +39,7 @@ body {
 }
 
 section {
-  margin: 0 clamp(2.5rem, 10vw, 80rem);
+  margin: 0 clamp(2.5rem, 10vw, 100rem);
   font-family: "Inter", "Arial";
   color: #CCD6F6;
 }
@@ -69,6 +69,16 @@ ul {
 .first-section {
   overflow: hidden;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-top: 100px;
   margin-bottom: 60px;
 }
@@ -93,7 +103,7 @@ ul {
   font-weight: 600;
 }
 
-.first-section::after {
+.first-section > *::after {
   content: "";
   position: absolute;
   top: 0;
@@ -101,8 +111,8 @@ ul {
   width: 100%;
   height: 100%;
   background-color: #0A192F;
-  -webkit-animation: slider 2s 0.3s ease-out forwards;
-          animation: slider 2s 0.3s ease-out forwards;
+  -webkit-animation: slider 0.7s 0.3s ease-out forwards;
+          animation: slider 0.7s 0.3s ease-out forwards;
 }
 
 @-webkit-keyframes slider {
@@ -263,11 +273,15 @@ ul {
   max-width: 1000px;
 }
 .second-section > div:last-of-type .navigation-content {
+  display: none;
   width: 100%;
   height: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 25px 35px;
+}
+.second-section > div:last-of-type .navigation-content.active {
+  display: block;
 }
 .second-section > div:last-of-type .title {
   display: -webkit-box;
@@ -276,10 +290,12 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 40px;
 }
 .second-section > div:last-of-type .title h2 {
-  font-size: 3.5rem;
   margin-right: 25px;
+  font-size: 3.5rem;
+  font-weight: 600;
 }
 .second-section > div:last-of-type .title::after {
   content: "";
@@ -291,26 +307,57 @@ ul {
   background-color: rgba(136, 146, 176, 0.3);
 }
 .second-section > div:last-of-type .description {
+  width: clamp(300px, 90%, 450px);
   margin-top: 20px;
   font-size: 1.5rem;
   color: #8892B0;
 }
-.second-section > div:last-of-type .description span {
+.second-section > div:last-of-type .description h2 {
+  margin-bottom: 2px;
   color: #CCD6F6;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.second-section > div:last-of-type .description p {
+  letter-spacing: 0.5px;
+  line-height: 24px;
+}
+.second-section > div:last-of-type .description span {
+  color: #60F7D4;
 }
 .second-section > div:last-of-type .skills-wrapper {
-  margin-top: 70px;
+  margin-top: 130px;
 }
-.second-section > div:last-of-type .skills-wrapper p {
-  margin-bottom: 20px;
-  font-size: 2.5rem;
+.second-section > div:last-of-type .skills-wrapper > p {
+  top: -55px;
+  color: #CCD6F6;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.second-section > div:last-of-type .skills-wrapper > p::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  translate: -50% -50%;
+  width: 60%;
+  height: 1px;
+  background-color: rgba(136, 146, 176, 0.3);
 }
 .second-section > div:last-of-type .skills {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.second-section > div:last-of-type .skills > div {
+.second-section > div:last-of-type .skills .languages,
+.second-section > div:last-of-type .skills .frameworks,
+.second-section > div:last-of-type .skills .tools {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
   display: -webkit-box;
@@ -323,73 +370,148 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.5rem;
 }
-.second-section > div:last-of-type .skills > div i {
+.second-section > div:last-of-type .skills .languages > i,
+.second-section > div:last-of-type .skills .frameworks > i,
+.second-section > div:last-of-type .skills .tools > i {
   margin-bottom: 8px;
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   color: #60F7D4;
 }
-.second-section > div:last-of-type .skills > div::after {
+.second-section > div:last-of-type .skills .languages > span,
+.second-section > div:last-of-type .skills .frameworks > span,
+.second-section > div:last-of-type .skills .tools > span {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.second-section > div:last-of-type .skills .languages::after,
+.second-section > div:last-of-type .skills .frameworks::after,
+.second-section > div:last-of-type .skills .tools::after {
   content: "";
   position: absolute;
-  top: 40px;
+  top: 60px;
   right: 0;
   width: 2px;
   height: 150px;
   background-color: rgba(136, 146, 176, 0.2);
 }
-.second-section > div:last-of-type .skills > div:last-of-type::after {
-  display: none;
+.second-section > div:last-of-type .skills .languages > ul,
+.second-section > div:last-of-type .skills .frameworks > ul,
+.second-section > div:last-of-type .skills .tools > ul {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 50px 0 0 40%;
 }
-.second-section > div:last-of-type .skills ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 35px;
+.second-section > div:last-of-type .skills .languages > ul li,
+.second-section > div:last-of-type .skills .frameworks > ul li,
+.second-section > div:last-of-type .skills .tools > ul li {
+  margin-bottom: 30px;
 }
-.second-section > div:last-of-type .skills ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.second-section > div:last-of-type .skills .languages > ul li:hover span,
+.second-section > div:last-of-type .skills .frameworks > ul li:hover span,
+.second-section > div:last-of-type .skills .tools > ul li:hover span {
+  color: #CCD6F6;
+}
+.second-section > div:last-of-type .skills .languages > ul li.sp,
+.second-section > div:last-of-type .skills .frameworks > ul li.sp,
+.second-section > div:last-of-type .skills .tools > ul li.sp {
+  margin-left: 20px;
   margin-bottom: 25px;
-  color: #8892B0;
 }
-.second-section > div:last-of-type .skills ul li .icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 25px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-.second-section > div:last-of-type .skills ul li .icon.java {
-  background-image: url("/assets/img/java-logo.png");
-}
-.second-section > div:last-of-type .skills ul li .icon.javascript {
-  background-image: url("/assets/img/js-logo.png");
-}
-.second-section > div:last-of-type .skills ul li .icon.html {
-  background-image: url("/assets/img/html-logo.png");
-}
-.second-section > div:last-of-type .skills ul li .icon.css {
-  background-image: url("/assets/img/css-logo.png");
-}
-.second-section > div:last-of-type .skills ul li .icon.sql {
-  background-image: url("/assets/img/sql-logo.png");
-}
-.second-section > div:last-of-type .skills ul li span {
+.second-section > div:last-of-type .skills .languages > ul li span,
+.second-section > div:last-of-type .skills .frameworks > ul li span,
+.second-section > div:last-of-type .skills .tools > ul li span {
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 2px;
+  color: #8892B0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+.second-section > div:last-of-type .skills .tools::after {
+  display: none;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  left: -30px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.icon.java {
+  background-image: url("/assets/img/java-logo.png");
+}
+.icon.javascript {
+  background-image: url("/assets/img/js-logo.png");
+}
+.icon.html {
+  background-image: url("/assets/img/html-logo.png");
+}
+.icon.css {
+  background-image: url("/assets/img/css-logo.png");
+}
+.icon.sql {
+  background-image: url("/assets/img/sql-logo.png");
+}
+.icon.spring {
+  background-image: url("/assets/img/spring-logo.png");
+}
+.icon.jpa {
+  background-image: url("/assets/img/jpa-logo.png");
+}
+.icon.security {
+  background-image: url("/assets/img/security-logo.png");
+}
+.icon.web {
+  background-image: url("/assets/img/web-logo.png");
+}
+.icon.hibernate {
+  background-image: url("/assets/img/hibernate-logo.png");
+}
+.icon.playwright {
+  background-image: url("/assets/img/playwright-logo.png");
+}
+.icon.docker {
+  background-image: url("/assets/img/docker-logo.png");
+}
+.icon.git {
+  background-image: url("/assets/img/git-logo.png");
+}
+.icon.maven {
+  background-image: url("/assets/img/maven-logo.png");
+}
+.icon.junit {
+  background-image: url("/assets/img/junit-logo.png");
+}
+.icon.thymeleaf {
+  background-image: url("/assets/img/thymeleaf-logo.png");
+}
+.icon.htmx {
+  background-image: url("/assets/img/htmx-logo.png");
+}
+.icon.scss {
+  background-image: url("/assets/img/scss-logo.png");
+}
+.icon.intellij {
+  background-image: url("/assets/img/intellij-logo.png");
+}
+.icon.visual {
+  background-image: url("/assets/img/visual-logo.png");
+}
+.icon.postresql {
+  background-image: url("/assets/img/postresql-logo.png");
+}
+.icon.photopea {
+  background-image: url("/assets/img/photopea-logo.png");
 }
 
 @-webkit-keyframes profile-pic-slide {
@@ -444,4 +566,21 @@ ul {
     -webkit-transform: translatey(0px);
             transform: translatey(0px);
   }
+}
+.projects .projects-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.projects .project {
+  width: 100%;
+  max-width: 800px;
+  background-color: rgba(0, 255, 255, 0.2);
 }/*# sourceMappingURL=style.css.map */

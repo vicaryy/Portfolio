@@ -18,10 +18,9 @@
 <body>
     <div class="content">
         <section class="first-section">
-            <p>Hello,
-            <p>
-            <h1>I'm Vicary.</h1>
-            <h3>A fullstack developer based in Poland.</h3>
+            <p class="relative">Hello,</p>
+            <h1 class="relative">I'm Vicary.</h1>
+            <h3 class="relative">A fullstack developer based in Poland.</h3>
         </section>
         <section class="second-section">
             <div>
@@ -36,52 +35,61 @@
                     </div>
                 </div>
                 <div class="navigation block">
-                    <span class="about">ABOUT</span>
+                    <span class="about active">ABOUT</span>
                     <span class="projects">PROJECTS</span>
                     <span class="contact">CONTACT</span>
                 </div>
             </div>
             <div>
-                <div class="navigation-content block">
+                <div class="navigation-content block about-me">
                     <div class="title">
                         <h2>About me</h2>
                     </div>
-                    <div class="description">
-                        <p>I am <span>Wiktor Cholewa</span>, a self-taught <span>full-stack developer</span> who is
-                            currently seeking my <span>first job</span>
-                            opportunity.</p>
+                    <div class="description who-am-i">
+                        <h2>Who am i?</h2>
+                        <p>Hello! My name is Wiktor, a 25 y/o programmer. My journey with programming began years ago
+                            during my school days, but
+                            my hobby for programming started in <span>early 2023</span> and I can't get enough of it.
+                            Beyond coding,
+                            I'm passionate about <span>music</span> and <span>sports</span>.</p>
                     </div>
-                    <div class="skills-wrapper">
-                        <p>My skills</p>
+                    <div class="description looking-for">
+                        <h2>What i am looking for?</h2>
+                        <p>I'm seeking my first <span>job</span> in programming as a <span>backend/fullstack
+                                developer</span>, eager to work on exciting projects, expand my knowledge, and learn
+                            from my co-workers.</p>
+                    </div>
+                    <div class="skills-wrapper relative">
+                        <p class="absolute-center">My statistics</p>
                         <div class="skills">
                             <div class="languages relative">
                                 <i class="fa-solid fa-code"></i>
                                 <span>Languages</span>
                                 <ul>
-                                    <li>
-                                        <div class="icon java">
+                                    <li class="relative">
+                                        <div class="icon java absolute-center">
                                         </div>
                                         <span>Java</span>
                                     </li>
-                                    <li>
-                                        <div class="icon javascript">
+                                    <li class="relative">
+                                        <div class="icon javascript absolute-center">
                                         </div>
-                                        <span>JavaScript</span>
+                                        <span>Javascript</span>
                                     </li>
-                                    <li>
-                                        <div class="icon html">
+                                    <li class="relative">
+                                        <div class="icon html absolute-center">
                                         </div>
-                                        <span>HTML</span>
+                                        <span>Html</span>
                                     </li>
-                                    <li>
-                                        <div class="icon css">
+                                    <li class="relative">
+                                        <div class="icon css absolute-center">
                                         </div>
-                                        <span>CSS</span>
+                                        <span>Css</span>
                                     </li>
-                                    <li>
-                                        <div class="icon sql">
+                                    <li class="relative">
+                                        <div class="icon sql absolute-center">
                                         </div>
-                                        <span>SQL</span>
+                                        <span>Sql</span>
                                     </li>
                                 </ul>
                             </div>
@@ -89,23 +97,55 @@
                                 <i class="fa-brands fa-codepen"></i>
                                 <span>Frameworks</span>
                                 <ul>
-                                    <li>
-                                        <div class="icon">
-                                            <img src="" alt="">
+                                    <li class="relative" style="margin-bottom: 25px;">
+                                        <div class="icon spring absolute-center">
                                         </div>
-                                        <span>Java</span>
+                                        <span>Spring</span>
                                     </li>
-                                    <li>
-                                        <div class="icon">
-                                            <img src="" alt="">
+                                    <li class="relative sp">
+                                        <div class="icon jpa absolute-center">
                                         </div>
-                                        <span>Javascript</span>
+                                        <span>Jpa</span>
                                     </li>
-                                    <li>
-                                        <div class="icon">
-                                            <img src="" alt="">
+                                    <li class="relative sp">
+                                        <div class="icon security absolute-center">
                                         </div>
-                                        <span>HTML</span>
+                                        <span>Security</span>
+                                    </li>
+                                    <li class="relative sp" style="margin-bottom: 35px;">
+                                        <div class="icon web absolute-center">
+                                        </div>
+                                        <span>Web</span>
+                                    </li>
+                                    <li class="relative">
+                                        <div class="icon hibernate absolute-center">
+                                        </div>
+                                        <span>Hibernate</span>
+                                    </li>
+                                    <li class="relative">
+                                        <div class="icon playwright absolute-center">
+                                        </div>
+                                        <span>Playwright</span>
+                                    </li>
+                                    <li class="relative">
+                                        <div class="icon junit absolute-center">
+                                        </div>
+                                        <span>Junit</span>
+                                    </li>
+                                    <li class="relative">
+                                        <div class="icon thymeleaf absolute-center">
+                                        </div>
+                                        <span>Thymeleaf</span>
+                                    </li>
+                                    <li class="relative">
+                                        <div class="icon htmx absolute-center">
+                                        </div>
+                                        <span>Htmx</span>
+                                    </li>
+                                    <li class="relative">
+                                        <div class="icon scss absolute-center">
+                                        </div>
+                                        <span>Scss</span>
                                     </li>
                                 </ul>
                             </div>
@@ -113,30 +153,69 @@
                                 <i class="fa-solid fa-screwdriver-wrench"></i>
                                 <span>Tools</span>
                                 <ul>
-                                    <li>
-                                        <div class="icon">
-                                            <img src="" alt="">
+                                    <li class="relative">
+                                        <div class="icon intellij absolute-center">
                                         </div>
-                                        <span>Java</span>
+                                        <span>Intellij</span>
                                     </li>
-                                    <li>
-                                        <div class="icon">
-                                            <img src="" alt="">
+                                    <li class="relative">
+                                        <div class="icon visual absolute-center">
                                         </div>
-                                        <span>Javascript</span>
+                                        <span>Visual</span>
                                     </li>
-                                    <li>
-                                        <div class="icon">
-                                            <img src="" alt="">
+                                    <li class="relative">
+                                        <div class="icon docker absolute-center">
                                         </div>
-                                        <span>HTML</span>
+                                        <span>Docker</span>
+                                    </li>
+                                    <li class="relative">
+                                        <div class="icon git absolute-center">
+                                        </div>
+                                        <span>Git</span>
+                                    </li>
+                                    <li class="relative">
+                                        <div class="icon maven absolute-center">
+                                        </div>
+                                        <span>Maven</span>
+                                    </li>
+                                    <li class="relative">
+                                        <div class="icon postresql absolute-center">
+                                        </div>
+                                        <span>Postresql</span>
+                                    </li>
+                                    <li class="relative">
+                                        <div class="icon photopea absolute-center">
+                                        </div>
+                                        <span>Photopea</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
+
+                <div>
+                    <div class="navigation-content block projects active">
+                        <div class="title">
+                            <h2>Projects</h2>
+                        </div>
+                        <div class="description few-words">
+                            <h2>Few words about them.</h2>
+                            <p>Here are a few projects that I managed to build throughout my journey in learning
+                                programming. Most of them are written in <span>Java</span> because it's my <span>primary
+                                    programming
+                                    language</span> in which I feel most comfortable.</p>
+                        </div>
+
+                        <div class="projects-list">
+                            <div class="project">p1</div>
+                            <div class="project">p2</div>
+                            <div class="project">p3</div>
+                            <div class="project">p4</div>
+                        </div>
+                    </div>
+                </div>
         </section>
         <footer></footer>
     </div>

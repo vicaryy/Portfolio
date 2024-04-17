@@ -5,10 +5,10 @@
     margin: 0;
     padding: 0;
     user-select: none;
-    
+
     @media (min-width: 1000px) {
-        user-select:text;
-    } 
+        user-select: text;
+    }
 }
 
 html {
@@ -21,6 +21,7 @@ body {
     margin: 0 auto;
     background-color: $bgc;
     font-family: $font;
+    // cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='28' fill='none' viewBox='0 0 26 31'%3E%3Cpath fill='%23010101' fill-rule='evenodd' stroke='%23fff' stroke-linecap='square' stroke-width='1.5' d='M21.993 14.425 2.549 2.935l4.444 23.108 4.653-10.002 10.347-1.616Z' clip-rule='evenodd'/%3E%3C/svg%3E"), auto;
 }
 
 .content {
@@ -28,8 +29,9 @@ body {
     width: 100%;
 }
 
+
 section {
-    margin: 0 clamp(2.5rem, 10vw, 80rem);
+    margin: 0 clamp(2.5rem, 10vw, 100rem);
     font-family: $font;
     color: $font-color;
 }
@@ -58,3 +60,4 @@ ul {
 
 @import "first-section";
 @import "second-section";
+@import "projects";

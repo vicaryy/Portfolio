@@ -128,19 +128,26 @@
         max-width: 1000px;
 
         .navigation-content {
+            display: none;
             width: 100%;
             height: auto;
             box-sizing: border-box;
             padding: 25px 35px;
+
+            &.active {
+                display: block;
+            }
         }
 
         .title {
             display: flex;
             align-items: center;
+            margin-bottom: 40px;
 
             h2 {
-                font-size: 3.5rem;
                 margin-right: 25px;
+                font-size: 3.5rem;
+                font-weight: 600;
             }
 
             &::after {
@@ -153,104 +160,225 @@
         }
 
         .description {
+            width: clamp(300px, 90%, 450px);
             margin-top: 20px;
             font-size: 1.5rem;
             color: $font-color-second;
 
-            span {
+            h2 {
+                margin-bottom: 2px;
                 color: $font-color;
+                font-size: 1.8rem;
+                font-weight: 500;
+                letter-spacing: .5px;
+            }
+
+            p {
+                letter-spacing: .5px;
+                line-height: 24px;
+            }
+
+            span {
+                color: $font-color-third;
             }
         }
 
         .skills-wrapper {
-            margin-top: 70px;
+            margin-top: 130px;
 
-            p {
-                margin-bottom: 20px;
-                font-size: 2.5rem;
+            &>p {
+                top: -55px;
+                color: $font-color;
+                font-size: 1.5rem;
+                font-weight: 600;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -6px;
+                    left: 50%;
+                    translate: -50% -50%;
+                    width: 60%;
+                    height: 1px;
+                    background-color: $line-color;
+                }
             }
+
+    
         }
 
         .skills {
             display: flex;
+            justify-content: center;
 
-            &>div {
+            .languages,
+            .frameworks,
+            .tools {
                 flex-basis: 40%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                font-size: 1.5rem;
 
-                i {
+                &>i {
                     margin-bottom: 8px;
-                    font-size: 2.2rem;
+                    font-size: 2.3rem;
                     color: $font-color-third;
+                }
+
+                &>span {
+                    text-transform: uppercase;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    letter-spacing: 2px;
                 }
 
                 &::after {
                     content: "";
                     position: absolute;
-                    top: 40px;
+                    top: 60px;
                     right: 0;
                     width: 2px;
                     height: 150px;
                     background-color: rgba(136, 146, 176, 0.2);
                 }
-            }
 
-            &>div:last-of-type::after {
-                display: none;
-            }
+                &>ul {
+                    align-self: flex-start;
+                    margin: 50px 0 0 40%;
 
-            ul {
-                display: flex;
-                flex-direction: column;
-                margin-top: 35px;
+                    li {
+                        margin-bottom: 30px;
 
-                li {
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 25px;
-                    color: $font-color-second;
-
-                    .icon {
-                        width: 30px;
-                        height: 30px;
-                        margin-right: 25px;
-                        background-position: center;
-                        background-size: contain;
-                        background-repeat: no-repeat;
-
-                        &.java {
-                            background-image: url('/assets/img/java-logo.png');
+                        &:hover {
+                            span {
+                                color: $font-color;
+                            }
                         }
 
-                        &.javascript {
-                            background-image: url('/assets/img/js-logo.png');
+                        &.sp {
+                            margin-left: 20px;
+                            margin-bottom: 25px;
                         }
 
-                        &.html {
-                            background-image: url('/assets/img/html-logo.png');
+                        span {
+                            text-transform: uppercase;
+                            font-size: 1.2rem;
+                            font-weight: 600;
+                            letter-spacing: 2px;
+                            color: $font-color-second;
+                            user-select: none;
+                            transition: color .5s;
                         }
-
-                        &.css {
-                            background-image: url('/assets/img/css-logo.png');
-                        }
-
-                        &.sql {
-                            background-image: url('/assets/img/sql-logo.png');
-                        }
-                    }
-
-                    span {
-                        text-transform: uppercase;
-                        font-size: 1.2rem;
-                        font-weight: 600;
-                        letter-spacing: 2px;
                     }
                 }
             }
+
+            .tools {
+                &::after {
+                    display: none;
+                }
+            }
         }
+    }
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    left: -30px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+    &.java {
+        background-image: url('/assets/img/java-logo.png');
+    }
+
+    &.javascript {
+        background-image: url('/assets/img/js-logo.png');
+    }
+
+    &.html {
+        background-image: url('/assets/img/html-logo.png');
+    }
+
+    &.css {
+        background-image: url('/assets/img/css-logo.png');
+    }
+
+    &.sql {
+        background-image: url('/assets/img/sql-logo.png');
+    }
+
+    &.spring {
+        background-image: url('/assets/img/spring-logo.png');
+    }
+
+    &.jpa {
+        background-image: url('/assets/img/jpa-logo.png');
+    }
+
+    &.security {
+        background-image: url('/assets/img/security-logo.png');
+    }
+
+    &.web {
+        background-image: url('/assets/img/web-logo.png');
+    }
+
+    &.hibernate {
+        background-image: url('/assets/img/hibernate-logo.png');
+    }
+
+    &.playwright {
+        background-image: url('/assets/img/playwright-logo.png');
+    }
+
+    &.docker {
+        background-image: url('/assets/img/docker-logo.png');
+    }
+
+    &.git {
+        background-image: url('/assets/img/git-logo.png');
+    }
+
+    &.maven {
+        background-image: url('/assets/img/maven-logo.png');
+    }
+
+    &.junit {
+        background-image: url('/assets/img/junit-logo.png');
+    }
+
+    &.thymeleaf {
+        background-image: url('/assets/img/thymeleaf-logo.png');
+    }
+
+    &.htmx {
+        background-image: url('/assets/img/htmx-logo.png');
+    }
+
+    &.scss {
+        background-image: url('/assets/img/scss-logo.png');
+    }
+
+    &.intellij {
+        background-image: url('/assets/img/intellij-logo.png');
+    }
+
+    &.visual {
+        background-image: url('/assets/img/visual-logo.png');
+    }
+
+    &.postresql {
+        background-image: url('/assets/img/postresql-logo.png');
+    }
+
+    &.photopea {
+        background-image: url('/assets/img/photopea-logo.png');
     }
 }
 
