@@ -11,6 +11,10 @@
     }
 }
 
+a {
+    text-decoration: none;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -56,6 +60,10 @@ section {
 
 ul {
     list-style: none;
+}
+
+hl {
+    color: $font-color-third;
 }
 
 @import "first-section";

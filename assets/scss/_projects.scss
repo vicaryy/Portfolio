@@ -1,14 +1,187 @@
+@import "variables";
+
+.block.projects {
+    background: linear-gradient($bgc-second 10%, $bgc 24%);
+}
+
 .projects {
 
     .projects-list {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 100px;
     }
 
     .project {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 100%;
         max-width: 800px;
-        background-color: rgba(0, 255, 255, .2);
+        min-height: 200px;
+        margin-bottom: 110px;
+
+        &:hover {
+            .p-photo {
+                img {
+                    opacity: 1;
+                    filter: sepia(0);
+                }
+            }
+        }
+
+
+        .p-photo {
+            display: flex;
+
+            a {
+                width: 70%;
+            }
+
+            img {
+                width: 100%;
+                opacity: .3;
+                filter: sepia(1);
+                box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
+                transition: .5s;
+            }
+        }
+
+        .p-description {
+            top: 50%;
+            left: 45%;
+            width: 60%;
+            translate: 0 -50%;
+            margin-top: 10px;
+            padding: 25px;
+            background-color: $bgc-second;
+            box-shadow: rgba(2, 12, 27, 0.7) 0px 20px 30px -15px;
+
+            .p-title {
+                top: -40px;
+                left: auto;
+                right: 0;
+                translate: 0 -50%;
+
+                h2 {
+                    font-family: $font-second;
+                    font-size: 2.7rem;
+                    font-weight: 600;
+                    text-align: center;
+                }
+
+                .hyperlinks {
+                    display: flex;
+                    top: calc(0% - 15px);
+                    left: auto;
+                    right: 0;
+                    translate: 0 -50%;
+
+                    a {
+                        color: $font-color-second;
+                        font-size: 1.9rem;
+                        margin-right: 15px;
+                        transition: color .5s;
+
+                        &:hover {
+                            color: $font-color-third;
+                        }
+                    }
+
+                    a:last-of-type {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            p {
+                margin-bottom: 5px;
+                font-size: 1.5rem;
+                line-height: 25.4px;
+                text-align: right;
+                color: $font-color-second;
+                letter-spacing: .5px;
+            }
+
+            .languages-used {
+                display: flex;
+                top: calc(100% + 25px);
+                left: 100%;
+                translate: -100% -50%;
+
+                p {
+                    position: relative;
+                    margin-right: 20px;
+                    font-size: 1.2rem;
+                    letter-spacing: 1px;
+                    font-family: $font-third;
+                    text-transform: uppercase;
+
+                    span {
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        translate: -50% -50%;
+                        font-size: 1rem;
+                    }
+                }
+
+                p:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+
+
+
+    .project:nth-of-type(even) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 800px;
+        min-height: 200px;
+        margin-bottom: 130px;
+
+        &:hover {
+            .p-photo {
+                img {
+                    opacity: 1;
+                    filter: sepia(0);
+                }
+            }
+        }
+
+
+        .p-photo {
+            justify-content: flex-end;
+        }
+
+        .p-description {
+            left: auto;
+            right: 45%;
+
+            .p-title {
+                left: 0;
+                right: auto;
+
+                .hyperlinks {
+                    left: 0;
+                    right: auto;
+                }
+            }
+
+            p {
+                text-align: left;
+            }
+
+            .languages-used {
+                left: 0%;
+                translate: 0% -50%;
+            }
+        }
     }
 }
