@@ -3,8 +3,10 @@ const navContents = document.querySelectorAll(".navigation-content");
 
 
 navButtons.forEach(e => e.addEventListener("click", () => {
-    console.log("click");
-    navButtons.forEach(e => e.classList.remove("active"));
-    navContents.forEach(e => e.classList.remove("active"));
-    e.classList.add("active");
+    removeActiveClasses(navButtons);
+    removeActiveClasses(navContents);
+    addActiveClass(e);
+    for (let i = 0; i < navButtons.length; i++)
+        if (navButtons[i].classList.contains("active"))
+            addActiveClass(navContents[i]);
 }));

@@ -1,0 +1,145 @@
+.navigation-content.contact {
+    background: linear-gradient($bgc-second 220px, $bgc 350px);
+
+
+
+    .description.lets-talk {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 3rem;
+        }
+
+        p {
+            width: 50%;
+            text-align: center;
+        }
+
+        .c-hyperlinks {
+            margin-top: 30px;
+            margin-bottom: 20px;
+
+            a {
+                margin-right: 10px;
+                font-size: 2.5rem;
+                color: $font-color-second;
+                transition: color .5s;
+
+                &:hover {
+                    color: $font-color-third;
+                }
+            }
+        }
+    }
+
+    //$bgc: #0A192F;
+    // $bgc-second: #112240;
+    // $bgc-third: #1A3462;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 40px;
+        font-size: 1.5rem;
+
+        &>div {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            max-width: 350px;
+
+            &:hover {
+
+                input,
+                textarea {
+                    border: 2px solid $bgc-third;
+                }
+            }
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            height: 45px;
+            margin-bottom: 10px;
+            padding: 0 15px;
+            background-color: $bgc-second;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            color: $font-color;
+            font-family: $font;
+            font-size: 1.6rem;
+            letter-spacing: .5px;
+            outline: none;
+            resize: none;
+            transition: border .5s, background-color .5s;
+        }
+
+        textarea {
+            padding: 10px 15px;
+            height: 100px;
+        }
+
+        .placeholder {
+            position: absolute;
+            top: 14px;
+            left: 15px;
+            color: $font-color-fourth;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            font-weight: 500;
+            letter-spacing: .5px;
+            transform: translateX(0);
+            transition: .7s;
+        }
+
+        .email.active,
+        .message.active {
+
+            input,
+            textarea {
+                border: 2px solid $bgc-third;
+                background-color: transparent;
+            }
+
+            .placeholder {
+                transform: translateX(calc(-100% - 25px));
+                color: $font-color-second;
+            }
+        }
+
+        .submit {
+            transition: background-color .5s;
+
+            input {
+                text-transform: uppercase;
+                font-size: 1.4rem;
+                font-weight: 600;
+                letter-spacing: .5px;
+                color: $font-color-fourth;
+                cursor: not-allowed;
+                transition: color .5s, background-color .5s;
+            }
+
+            &.active {
+                input {
+                    color: $font-color;
+                    background-color: $bgc;
+                    border: 2px solid $bgc-third;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $bgc-second;
+                    }
+                }
+            }
+        }
+    }
+}

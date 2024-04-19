@@ -1,3 +1,23 @@
+@import "variables";
+
+.content {
+    position: relative;
+    .cv {
+        position: absolute;
+        top: 80px;
+        right: 12%;
+        padding: 10px 25px;
+        border: none;
+        border-radius: 10px;
+        background-color: $bgc-second;
+        color: $font-color-third;
+        font-family: $font-third;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 1;
+    }
+}
+
 .first-section {
     overflow: hidden;
     position: relative;

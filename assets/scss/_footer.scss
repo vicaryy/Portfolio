@@ -1,0 +1,52 @@
+footer {
+    display: flex;
+    padding: 50px 100px;
+    color: $font-color-fourth;
+    font-size: 1.4rem;
+    font-weight: 300;
+
+    hl {
+        color: $font-color-second;
+    }
+
+    div {
+        flex-basis: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            cursor: default;
+            transition: color .5s;
+        }
+
+        span:hover {
+            color: $font-color-second;
+        }
+    }
+
+    .f-trademark {
+        justify-content: flex-start;
+    }
+
+    .f-description {
+        span {
+            width: 250px;
+        }
+    }
+
+    .f-hyperlinks {
+        justify-content: flex-end;
+
+        a {
+            font-size: 2.5rem;
+            margin-right: 12px;
+            color: inherit;
+            transition: .5s;
+
+            &:hover {
+                color: $font-color-third;
+            }
+        }
+    }
+}

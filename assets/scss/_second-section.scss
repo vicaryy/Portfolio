@@ -184,7 +184,7 @@
         }
 
         .skills-wrapper {
-            margin-top: 130px;
+            margin-top: 150px;
 
             &>p {
                 top: -55px;
@@ -206,7 +206,7 @@
                 }
             }
 
-    
+
         }
 
         .skills {
@@ -232,6 +232,7 @@
                     font-size: 1.4rem;
                     font-weight: 600;
                     letter-spacing: 2px;
+                    color: $font-color-second;
                 }
 
                 &::after {
@@ -252,6 +253,11 @@
                         margin-bottom: 30px;
 
                         &:hover {
+
+                            .icon {
+                                filter: brightness(100%);
+                            }
+
                             span {
                                 color: $font-color;
                             }
@@ -284,6 +290,10 @@
     }
 }
 
+.about-me.block {
+    background: linear-gradient($bgc-second 24%, $bgc 38%);
+}
+
 .icon {
     width: 30px;
     height: 30px;
@@ -291,7 +301,8 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-
+    filter: brightness(70%);
+    transition: filter .5s;
 
     &.java {
         background-image: url('/assets/img/java-logo.png');
