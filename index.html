@@ -15,28 +15,16 @@
     <script src="assets/js/Navigation.js" crossorigin="anonymous" defer></script>
     <script src="assets/js/Tools.js" crossorigin="anonymous" defer></script>
     <script src="assets/js/Contact.js" crossorigin="anonymous" defer></script>
+    <script src="assets/js/Eyes.js" crossorigin="anonymous" defer></script>
     <title>Vicary</title>
 </head>
 
 <body>
-
-    <div class="test">
-        <!-- <div id="moon"></div> -->
-        <img class="image" src="assets/img/avatar copy.png" alt="">
-        <img class="image-test" src="assets/img/avatar-test.png" alt="">
-        <span>
-            <div></div>
-        </span>
-        <span>
-            <div></div>
-        </span>
-    </div>
-
     <div class="content">
         <button class="cv">
             <span>downloadCV()</span>
-            <div class="cv-icon">
-
+            <div>
+                <i class="fa-solid fa-file-arrow-down"></i>
             </div>
         </button>
         <section class="first-section">
@@ -49,7 +37,20 @@
                 <div class="profile block">
                     <div class="profile-pic-wrapper">
                         <div class="profile-pic absolute-center">
-                            <img class="absolute-center" src="assets/img/avatar.png" alt="">
+                            <img data-tilt data-tilt-max="12" data-tilt-reverse="true" data-tilt-full-page-listening
+                                class="image" src="assets/img/avatar copy.png" alt="">
+                            <img data-tilt data-tilt-max="12" data-tilt-reverse="true" data-tilt-full-page-listening
+                                class="image-test" src="assets/img/avatar-eyes.png" alt="">
+                            <div class="left-eye dot">
+                                <div class="left-eye">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="right-eye dot">
+                                <div class="right-eye">
+                                    <span></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="name-wrapper relative">
@@ -57,13 +58,13 @@
                     </div>
                 </div>
                 <div class="navigation block">
-                    <span class="about active">ABOUT</span>
-                    <span class="projects">PROJECTS</span>
-                    <span class="contact">CONTACT</span>
+                    <div><span class="about active">ABOUT</span></div>
+                    <div><span class="projects">PROJECTS</span></div>
+                    <div><span class="contact">CONTACT</span></div>
                 </div>
             </div>
             <div>
-                <div class="navigation-content block about-me">
+                <div class="navigation-content block about-me active">
                     <div class="title">
                         <h2>About me</h2>
                     </div>
@@ -361,7 +362,7 @@
                     </div>
 
 
-                    <div class="navigation-content block contact active">
+                    <div class="navigation-content block contact">
                         <div class="title">
                             <h2>Contact</h2>
                         </div>
@@ -375,7 +376,8 @@
                                         class=" fa-brands fa-telegram"></i></a>
                             </div>
                             <h2>Let's talk!</h2>
-                            <p>If you have any <hl>questions</hl>, <hl>job offers</hl>, or simply want to <hl>chat</hl>, feel free to use the form
+                            <p>If you have any <hl>questions</hl>, <hl>job offers</hl>, or simply want to <hl>chat</hl>,
+                                feel free to use the form
                                 below or the above hyperlinks. I'll be happy to respond in my free time! :)</p>
                         </div>
                         <form action="">
@@ -414,17 +416,11 @@
 
     <script src="assets/js/vanilla-tilt.js"></script>
     <script type="text/javascript">
-        VanillaTilt.init(document.querySelector(".profile.block"), {
-            max: 10,
-            speed: 5000,
-            reverse: true
-        });
         VanillaTilt.init(document.querySelectorAll(".p-photo a"), {
             max: 8,
             speed: 5000,
             reverse: true
         });
-
     </script>
 </body>
 

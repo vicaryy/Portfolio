@@ -3,18 +3,52 @@
 .content {
     position: relative;
     .cv {
+        overflow: hidden;
         position: absolute;
+        opacity: 0;
         top: 80px;
         right: 12%;
-        padding: 10px 25px;
-        border: none;
+        width: 155px;
+        padding: 21px 25px;
+        border: 2px solid transparent;
         border-radius: 10px;
         background-color: $bgc-second;
-        color: $font-color-third;
+        color: $font-color-second;
         font-family: $font-third;
         font-size: 1.5rem;
         cursor: pointer;
         z-index: 1;
+        box-sizing: border-box;
+        transition: .5s;
+        animation: slide-show .5s 1s reverse forwards linear;
+
+        span {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            translate: -20px -50%;
+        }
+
+        &:hover {
+            width: 180px;
+            color: $font-color;
+            border: 2px solid $bgc-second;
+            background-color: transparent;
+
+            div {
+                translate: -142px -50%;
+
+            }
+        }
+
+        div {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            translate: -142px -45px;
+            font-size: 1.8rem;
+            transition: .5s;
+        }
     }
 }
 
@@ -59,11 +93,18 @@
     width: 100%;
     height: 100%;
     background-color: $bgc;
-    animation: slider .7s .3s ease-out forwards;
+    animation: slider 1s .3s ease-out forwards;
 }
 
 @keyframes slider {
     to {
         transform: translateX(100%);
+    }
+}
+
+@keyframes slide-show {
+    from {
+        transform: translateY(-10px);
+        opacity: 1;
     }
 }

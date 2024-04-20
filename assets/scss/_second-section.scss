@@ -33,9 +33,65 @@
                 transition: 1s;
                 animation: float 6s ease-in-out infinite;
 
-                img {
+                .image {
+                    visibility: hidden;
                     width: 100%;
-                    animation: profile-pic-slide 1.5s;
+                    translate: 0 100%;
+                    animation: profile-pic-slide 1.5s 1s forwards;
+                }
+
+                .image-test {
+                    visibility: hidden;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    z-index: 3;
+                    translate: 0 100%;
+                    animation: profile-pic-slide 1.5s 1s forwards;
+                }
+
+                .dot {
+                    position: absolute;
+                    height: 2px;
+                    width: 2px;
+                    background-color: red;
+                    z-index: 1;
+                    translate: 0 139px;
+                    animation: eyes-slide 1.5s 1s forwards;
+
+                    &>div {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 9px;
+                        height: 11px;
+                        translate: -20% -55%;
+                        background-color: #011229;
+                        border-radius: 100%;
+                        filter: blur(.2px);
+
+
+                        &>span {
+                            position: absolute;
+                            top: 43%;
+                            left: 60%;
+                            width: 2px;
+                            height: 2px;
+                            background-color: white;
+                            border-radius: 100%;
+                        }
+                    }
+                }
+
+                .right-eye.dot {
+                    top: 52%;
+                    left: 70.8%;
+                }
+
+                .left-eye.dot {
+                    top: 52%;
+                    left: 47.2%;
                 }
             }
 
@@ -48,25 +104,27 @@
 
             p {
                 width: 100%;
+                top: 72%;
                 text-align: center;
                 font-size: 1.5rem;
+                opacity: 0;
                 text-transform: uppercase;
                 font-weight: 600;
                 letter-spacing: 1px;
                 color: $font-color-second;
                 transition: .6s;
+                animation: slide-show .5s 2s reverse forwards linear;
+
             }
 
             &:hover {
-
                 .profile-pic {
                     background-color: #122545;
                     ;
                 }
 
                 p {
-                    transform: translateY(-20%);
-                    font-size: 1.5rem;
+                    translate: -50% -15px;
                     color: $font-color;
                 }
             }
@@ -84,7 +142,12 @@
             box-sizing: border-box;
             padding: 25px 0;
 
-            &>span {
+            div {
+
+            }
+
+            span {
+                // position: absolute;
                 display: flex;
                 align-items: center;
                 margin: 5px 15px;
@@ -394,10 +457,31 @@
 }
 
 @keyframes profile-pic-slide {
-    from {
-        transform: translateY(70%);
+    0% {
+        visibility: hidden;
+    }
+
+    1% {
+        visibility: visible;
+    }
+
+    100% {
+        visibility: visible;
+        translate: 0 0;
     }
 }
+
+//transform: translateY(70%);
+
+
+@keyframes eyes-slide {
+    to {
+        translate: 0 0;
+    }
+}
+
+//transform: translateY(93px);
+
 
 @keyframes float {
     0% {
@@ -413,5 +497,18 @@
     100% {
         box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
         transform: translatey(0px);
+    }
+}
+
+@keyframes slider {
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slide-show {
+    from {
+        transform: translateY(-10px);
+        opacity: 1;
     }
 }
