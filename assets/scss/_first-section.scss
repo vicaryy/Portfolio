@@ -2,18 +2,20 @@
 
 .content {
     position: relative;
+
     .cv {
         overflow: hidden;
         position: absolute;
         opacity: 0;
-        top: 80px;
-        right: 12%;
-        width: 155px;
+        top: 40px;
+        right: 15px;
+        width: 112px;
         padding: 21px 25px;
         border: 2px solid transparent;
         border-radius: 10px;
+        box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
         background-color: $bgc-second;
-        color: $font-color-second;
+        color: $font-color-third;
         font-family: $font-third;
         font-size: 1.5rem;
         cursor: pointer;
@@ -29,19 +31,8 @@
             translate: -20px -50%;
         }
 
-        &:hover {
-            width: 180px;
-            color: $font-color;
-            border: 2px solid $bgc-second;
-            background-color: transparent;
-
-            div {
-                translate: -142px -50%;
-
-            }
-        }
-
         div {
+            display: none;
             position: absolute;
             right: 0;
             top: 50%;
@@ -58,8 +49,9 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 100px;
-    margin-bottom: 60px;
+    margin-top: 100px;//
+    margin-bottom: 50px;//
+
 
     p {
         margin-bottom: 20px;
@@ -108,3 +100,114 @@
         opacity: 1;
     }
 }
+
+// @import "variables";
+
+// .content {
+//     position: relative;
+//     .cv {
+//         overflow: hidden;
+//         position: absolute;
+//         opacity: 0;
+//         top: 80px;
+//         right: 12%;
+//         width: 155px;
+//         padding: 21px 25px;
+//         border: 2px solid transparent;
+//         border-radius: 10px;
+//         background-color: $bgc-second;
+//         color: $font-color-second;
+//         font-family: $font-third;
+//         font-size: 1.5rem;
+//         cursor: pointer;
+//         z-index: 1;
+//         box-sizing: border-box;
+//         transition: .5s;
+//         animation: slide-show .5s 1s reverse forwards linear;
+
+//         span {
+//             position: absolute;
+//             right: 0;
+//             top: 50%;
+//             translate: -20px -50%;
+//         }
+
+//         &:hover {
+//             width: 180px;
+//             color: $font-color;
+//             border: 2px solid $bgc-second;
+//             background-color: transparent;
+
+//             div {
+//                 translate: -142px -50%;
+
+//             }
+//         }
+
+//         div {
+//             position: absolute;
+//             right: 0;
+//             top: 50%;
+//             translate: -142px -45px;
+//             font-size: 1.8rem;
+//             transition: .5s;
+//         }
+//     }
+// }
+
+// .first-section {
+//     overflow: hidden;
+//     position: relative;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     margin-top: 100px;
+//     margin-bottom: 60px;
+
+//     p {
+//         margin-bottom: 20px;
+//         font-family: 'SF Mono', sans-serif;
+//         font-weight: 400;
+//         font-size: clamp(14px, 5vw, 16px);
+//         color: $font-color-third;
+//     }
+
+//     h1 {
+//         font-family: $font-second;
+//         font-size: clamp(3.5rem, 7vw, 6rem);
+//         color: $font-color;
+//         letter-spacing: 1px;
+//         font-weight: 600;
+//     }
+
+//     h3 {
+//         font-size: clamp(2.5rem, 4vw, 4.5rem);
+//         color: $font-color-second;
+//         letter-spacing: 1px;
+//         font-weight: 600;
+//     }
+// }
+
+// .first-section>*::after {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: $bgc;
+//     animation: slider 1s .3s ease-out forwards;
+// }
+
+// @keyframes slider {
+//     to {
+//         transform: translateX(100%);
+//     }
+// }
+
+// @keyframes slide-show {
+//     from {
+//         transform: translateY(-10px);
+//         opacity: 1;
+//     }
+// }

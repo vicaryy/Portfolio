@@ -1,12 +1,12 @@
 .second-section {
     display: flex;
+    flex-direction: column; //
     margin-bottom: 100px;
 
     &>div:first-of-type {
         display: flex;
-        flex-direction: column;
-        margin-right: 50px;
         color: $font-color;
+        margin-bottom: 20px; //
 
         .profile {
             display: flex;
@@ -14,6 +14,7 @@
             align-items: center;
             width: 200px;
             min-height: 200px;
+            margin-right: 10px;
 
             .profile-pic-wrapper {
                 position: relative;
@@ -104,50 +105,35 @@
 
             p {
                 width: 100%;
-                top: 72%;
+                top: 65%; //
                 text-align: center;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 opacity: 0;
                 text-transform: uppercase;
                 font-weight: 600;
                 letter-spacing: 1px;
                 color: $font-color-second;
                 transition: .6s;
-                animation: slide-show .5s 2s reverse forwards linear;
+                animation: slide-show .5s 1.5s reverse forwards linear;
 
-            }
-
-            &:hover {
-                .profile-pic {
-                    background-color: #122545;
-                    ;
-                }
-
-                p {
-                    translate: -50% -15px;
-                    color: $font-color;
-                }
             }
         }
 
         .navigation {
             display: flex;
             flex-direction: column;
-            margin-top: 20px;
-            width: 200px;
+            // width: 160px;//
+            width: 60%; //
+            max-width: 200px; //
             height: auto;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
             letter-spacing: 2px;
             box-sizing: border-box;
             padding: 25px 0;
 
-            div {
-
-            }
-
+            //here
             span {
-                // position: absolute;
                 display: flex;
                 align-items: center;
                 margin: 5px 15px;
@@ -155,30 +141,37 @@
                 color: $font-color-fourth;
                 cursor: pointer;
                 transition: .5s;
+                transform: scale(.8);
+                opacity: 0;
+
+                &:nth-of-type(1) {
+                    animation: 1s 2s fade-in forwards;
+                    margin-top: 0; //
+                }
+
+                &:nth-of-type(2) {
+                    animation: 1s 2.2s fade-in forwards;
+                }
+
+                &:nth-of-type(3) {
+                    animation: 1s 2.4s fade-in forwards;
+                    margin-bottom: 0; //
+                }
 
                 &::before {
                     content: "";
-                    width: 25px;
+                    width: 15px; //
                     height: 1.5px;
                     margin-right: 10px;
                     background-color: $line-color;
                     transition: .5s;
                 }
 
-                &:hover {
-                    color: $font-color;
-
-                    &::before {
-                        width: 70px;
-                        background-color: $line-color-second;
-                    }
-                }
-
                 &.active {
                     color: $font-color;
 
                     &::before {
-                        width: 70px;
+                        width: 35px; //
                         background-color: $line-color-second;
                     }
                 }
@@ -186,16 +179,25 @@
         }
     }
 
-    &>div:last-of-type {
+    .navigation-contents {
         flex-basis: 100%;
         max-width: 1000px;
+
+        .navigation-content.about-me .navigation-content-wrapper {
+            // animation: 1s 2.6s fade-in forwards;
+        }
+
+        .navigation-content-wrapper {
+            opacity: 1;
+            // <><><> na gorze na 0 zrob, czemu? bo tak
+            // animation: 1s fade-in forwards;
+        }
 
         .navigation-content {
             display: none;
             width: 100%;
             height: auto;
             box-sizing: border-box;
-            padding: 25px 35px;
 
             &.active {
                 display: block;
@@ -206,10 +208,11 @@
             display: flex;
             align-items: center;
             margin-bottom: 40px;
+            padding: 25px 20px;
 
             h2 {
                 margin-right: 25px;
-                font-size: 3.5rem;
+                font-size: 2.6rem;
                 font-weight: 600;
             }
 
@@ -223,8 +226,9 @@
         }
 
         .description {
-            width: clamp(300px, 90%, 450px);
+            width: 100%; //
             margin-top: 20px;
+            padding: 0px 20px;
             font-size: 1.5rem;
             color: $font-color-second;
 
@@ -238,7 +242,11 @@
 
             p {
                 letter-spacing: .5px;
-                line-height: 24px;
+                line-height: 23px;
+
+                &:first-of-type {
+                    margin-bottom: 25px;
+                }
             }
 
             span {
@@ -247,12 +255,12 @@
         }
 
         .skills-wrapper {
-            margin-top: 150px;
+            margin-top: 130px;
 
             &>p {
-                top: -55px;
+                top: -40px;
                 color: $font-color;
-                font-size: 1.5rem;
+                font-size: clamp(1rem, 3.5vw, 1.4rem); //
                 font-weight: 600;
                 letter-spacing: 2px;
                 text-transform: uppercase;
@@ -274,61 +282,78 @@
 
         .skills {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            min-height: 420px;
 
             .languages,
             .frameworks,
             .tools {
-                flex-basis: 40%;
+                width: 40%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
 
-                &>i {
-                    margin-bottom: 8px;
-                    font-size: 2.3rem;
-                    color: $font-color-third;
+                &.active {
+                    .stat-name {
+                        background-color: $bgc-second;
+
+                        i {
+                            color: $font-color-third;
+                        }
+
+                        span {
+                            color: $font-color;
+                        }
+                    }
+
+                    &>ul {
+                        display: block;
+                        position: absolute;
+                        left: 60%;
+                        top: -80px;
+                    }
                 }
 
-                &>span {
-                    text-transform: uppercase;
-                    font-size: 1.4rem;
-                    font-weight: 600;
-                    letter-spacing: 2px;
-                    color: $font-color-second;
-                }
+                .stat-name {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 95%;
+                    padding: 10px 0;
+                    border-radius: 10px;
+                    transition: background-color .5s;
 
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 60px;
-                    right: 0;
-                    width: 2px;
-                    height: 150px;
-                    background-color: rgba(136, 146, 176, 0.2);
+                    i {
+                        margin-bottom: 8px;
+                        font-size: 2rem;
+                        color: $font-color-second;
+                        transition: color .5s;
+                    }
+
+                    span {
+                        text-transform: uppercase;
+                        font-size: 1.1rem;
+                        font-weight: 600;
+                        letter-spacing: 2px;
+                        color: $font-color-fourth;
+                        transition: color .5s;
+                    }
+
                 }
 
                 &>ul {
-                    align-self: flex-start;
-                    margin: 50px 0 0 40%;
+                    display: none;
+                    margin: 100px 0 0 0; //
+                    opacity: 0;
+                    animation: fade-in 1s forwards;
+
 
                     li {
-                        margin-bottom: 30px;
-
-                        &:hover {
-
-                            .icon {
-                                filter: brightness(100%);
-                            }
-
-                            span {
-                                color: $font-color;
-                            }
-                        }
+                        margin-bottom: 40px;
 
                         &.sp {
-                            margin-left: 20px;
-                            margin-bottom: 25px;
+                            margin-left: 50px;
+                            margin-bottom: 35px;
                         }
 
                         span {
@@ -358,13 +383,14 @@
 }
 
 .icon {
-    width: 30px;
-    height: 30px;
+    // display: none;
+    width: 30px; //
+    height: 30px; //
     left: -30px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    filter: brightness(70%);
+    filter: brightness(80%);
     transition: filter .5s;
 
     &.java {
@@ -456,6 +482,197 @@
     }
 }
 
+@media (min-width: 700px) {
+    .second-section {
+        flex-direction: row;
+
+        &>div:first-of-type {
+            flex-direction: column;
+            margin-right: 10px;
+
+            .profile {
+                p {
+                    font-size: 1.3rem;
+                }
+            }
+
+            .navigation {
+                margin-top: 20px;
+                width: 200px;
+                font-size: 1.2rem;
+
+                //here
+                span {
+                    &::before {
+                        width: 25px;
+                    }
+
+                    &.active {
+
+                        &::before {
+                            width: 70px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .navigation-contents {
+
+            .title {
+                h2 {
+                    font-size: 3.2rem;
+                }
+            }
+
+            .description {
+                width: clamp(300px, 90%, 450px);
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .second-section {
+        &>div:first-of-type {
+            margin-right: 50px;
+
+            .profile {
+                p {
+                    top: 72%;
+                    font-size: 1.5rem;
+                }
+
+                &:hover {
+                    .profile-pic {
+                        background-color: #122545;
+                    }
+
+                    p {
+                        translate: -50% -15px;
+                        color: $font-color;
+                    }
+                }
+            }
+
+            .navigation {
+                span {
+                    &:hover {
+                        color: $font-color;
+
+                        &::before {
+                            width: 70px;
+                            background-color: $line-color-second;
+                        }
+                    }
+                }
+            }
+        }
+
+        .navigation-contents {
+            .navigation-content {
+                padding: 25px 35px;
+            }
+
+            .title {
+                h2 {
+                    font-size: 3.5rem;
+                }
+            }
+
+            .skills-wrapper {
+                margin-top: 150px;
+
+                &>p {
+                    top: -55px;
+                    font-size: 1.5rem;
+                }
+            }
+
+            .skills {
+                flex-direction: row;
+                justify-content: center;
+
+                .languages,
+                .frameworks,
+                .tools {
+                    position: relative;
+
+                    .stat-name {
+                        width: 100%;
+
+                        i {
+                            font-size: 2.3rem;
+                            color: $font-color-third;
+                        }
+
+                        span {
+                            font-size: 1.3rem;
+                            color: $font-color-second;
+                        }
+
+                    }
+
+                    &.active {
+                        .stat-name {
+                            background-color: $bgc;
+
+                            span {
+                                color: $font-color-second;
+                            }
+                        }
+
+                        &>ul {
+                            position: static;
+                        }
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 60px;
+                        right: 0;
+                        width: 2px;
+                        height: 150px;
+                        background-color: rgba(136, 146, 176, 0.2);
+                    }
+
+                    &>ul {
+                        display: block;
+                        align-self: flex-start;
+                        margin: 45px 0 0 40%;
+
+                        li {
+                            &:hover {
+
+                                .icon {
+                                    filter: brightness(100%);
+                                }
+
+                                span {
+                                    color: $font-color;
+                                }
+                            }
+
+                            &.sp {
+                                margin-left: 20px;
+                                margin-bottom: 25px;
+                            }
+                        }
+                    }
+                }
+
+                .tools {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @keyframes profile-pic-slide {
     0% {
         visibility: hidden;
@@ -471,17 +688,11 @@
     }
 }
 
-//transform: translateY(70%);
-
-
 @keyframes eyes-slide {
     to {
         translate: 0 0;
     }
 }
-
-//transform: translateY(93px);
-
 
 @keyframes float {
     0% {
@@ -510,5 +721,12 @@
     from {
         transform: translateY(-10px);
         opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }

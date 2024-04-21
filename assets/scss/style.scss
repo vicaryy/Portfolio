@@ -29,20 +29,23 @@ body {
 }
 
 .content {
+    overflow: hidden;
     max-width: 1920px;
     width: 100%;
 }
 
 
 section {
-    margin: 0 clamp(2.5rem, 10vw, 100rem);
+    margin: 0 2rem;
     font-family: $font;
     color: $font-color;
+
+    @media (min-width: 1000px) {
+        margin: 0 clamp(2rem, 10vw, 150rem);
+    }
 }
 
 .block {
-    height: 100px;
-    width: 100px;
     background-color: $bgc-second;
     border-radius: 15px
 }
