@@ -184,13 +184,12 @@
         max-width: 1000px;
 
         .navigation-content.about-me .navigation-content-wrapper {
-            // animation: 1s 2.6s fade-in forwards;
+            animation: 1s 2.6s fade-in forwards;
         }
 
         .navigation-content-wrapper {
-            opacity: 1;
-            // <><><> na gorze na 0 zrob, czemu? bo tak
-            // animation: 1s fade-in forwards;
+            opacity: 0;
+            animation: 1s fade-in forwards;
         }
 
         .navigation-content {
@@ -242,7 +241,7 @@
 
             p {
                 letter-spacing: .5px;
-                line-height: 23px;
+                line-height: 20px;
 
                 &:first-of-type {
                     margin-bottom: 25px;
@@ -326,7 +325,7 @@
                     i {
                         margin-bottom: 8px;
                         font-size: 2rem;
-                        color: $font-color-second;
+                        color: $font-color-fourth;
                         transition: color .5s;
                     }
 

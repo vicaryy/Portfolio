@@ -15,7 +15,8 @@
         }
 
         p {
-            width: 50%;
+            width: 90%;
+            max-width: 350px;
             text-align: center;
         }
 
@@ -28,40 +29,24 @@
                 font-size: 2.5rem;
                 color: $font-color-second;
                 transition: color .5s;
-
-                &:hover {
-                    color: $font-color-third;
-                }
             }
         }
     }
-
-    //$bgc: #0A192F;
-    // $bgc-second: #112240;
-    // $bgc-third: #1A3462;
 
     form {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        margin-top: 40px;
+        margin-top: 20px;
         font-size: 1.5rem;
 
         &>div {
             position: relative;
             display: flex;
             justify-content: center;
-            width: 90%;
+            width: 55%;
             max-width: 350px;
-
-            &:hover {
-
-                input,
-                textarea {
-                    border: 2px solid $bgc-third;
-                }
-            }
         }
 
         input,
@@ -135,6 +120,34 @@
                     border: 2px solid $bgc-third;
                     cursor: pointer;
 
+                    &:hover {
+                        background-color: $bgc-second;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 1200px) {
+    .navigation-content.contact {
+
+        form {
+            margin-top: 40px;
+            &>div {
+                width: 90%;
+
+                &:hover {
+
+                    input,
+                    textarea {
+                        border: 2px solid $bgc-third;
+                    }
+                }
+            }
+
+            .submit {
+                &.active {
                     &:hover {
                         background-color: $bgc-second;
                     }
