@@ -1,5 +1,5 @@
 .navigation-content.contact {
-    background: linear-gradient($bgc-second 220px, $bgc 350px);
+    background: linear-gradient(var(--bgc-second) 220px, var(--bgc) 350px);
 
 
 
@@ -27,7 +27,7 @@
             a {
                 margin-right: 10px;
                 font-size: 2.5rem;
-                color: $font-color-second;
+                color: var(--font-color-second);
                 transition: color .5s;
             }
         }
@@ -55,16 +55,16 @@
             height: 45px;
             margin-bottom: 10px;
             padding: 0 15px;
-            background-color: $bgc-second;
+            background-color: var(--bgc-second);
             border: 2px solid transparent;
             border-radius: 10px;
-            color: $font-color;
-            font-family: $font;
+            color: var(--font-color);
+            font-family: var(--font);
             font-size: 1.6rem;
             letter-spacing: .5px;
             outline: none;
             resize: none;
-            transition: border .5s, background-color .5s;
+            transition: .5s;
         }
 
         textarea {
@@ -76,7 +76,7 @@
             position: absolute;
             top: 14px;
             left: 15px;
-            color: $font-color-fourth;
+            color: var(--font-color-fourth);
             text-transform: uppercase;
             font-size: 1.4rem;
             font-weight: 500;
@@ -90,13 +90,13 @@
 
             input,
             textarea {
-                border: 2px solid $bgc-third;
+                border: 2px solid var(--bgc-third);
                 background-color: transparent;
             }
 
             .placeholder {
                 transform: translateX(calc(-100% - 25px));
-                color: $font-color-second;
+                color: var(--font-color-second);
             }
         }
 
@@ -108,20 +108,20 @@
                 font-size: 1.4rem;
                 font-weight: 600;
                 letter-spacing: .5px;
-                color: $font-color-fourth;
+                color: var(--font-color-fourth);
                 cursor: not-allowed;
                 transition: color .5s, background-color .5s;
             }
 
             &.active {
                 input {
-                    color: $font-color;
-                    background-color: $bgc;
-                    border: 2px solid $bgc-third;
+                    color: var(--font-color);
+                    background-color: var(--bgc);
+                    border: 2px solid var(--bgc-third);
                     cursor: pointer;
 
                     &:hover {
-                        background-color: $bgc-second;
+                        background-color: var(--bgc-second);
                     }
                 }
             }
@@ -141,7 +141,7 @@
 
                     input,
                     textarea {
-                        border: 2px solid $bgc-third;
+                        border: 2px solid var(--bgc-third);
                     }
                 }
             }
@@ -149,7 +149,7 @@
             .submit {
                 &.active {
                     &:hover {
-                        background-color: $bgc-second;
+                        background-color: var(--bgc-second);
                     }
                 }
             }

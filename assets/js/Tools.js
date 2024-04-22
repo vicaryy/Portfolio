@@ -10,6 +10,9 @@ function addActiveClass(element, listOfElements) {
     }
     element.classList.add("active");
 };
+function toggleActiveClass(element) {
+    element.classList.toggle("active");
+};
 
 function addClass(element, className, listOfElements) {
     if (element.classList.contains(className))

@@ -3,12 +3,14 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 50px 100px 10px 100px;
-    color: $font-color-fourth;
+    color: var(--font-color-fourth);
     font-size: 1.4rem;
     font-weight: 300;
+    transition: color var(--time);
 
     hl {
-        color: $font-color-second;
+        color: var(--font-color-second);
+        transition: color var(--time);
     }
 
     div {
@@ -24,7 +26,7 @@ footer {
         }
 
         span:hover {
-            color: $font-color-second;
+            color: var(--font-color-second);
         }
     }
 
@@ -57,7 +59,7 @@ footer {
 
         a {
             &:hover {
-                color: $font-color-third;
+                color: var(--font-color-third);
             }
         }
     }

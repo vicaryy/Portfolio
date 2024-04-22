@@ -1,12 +1,9 @@
 const style = document.documentElement.style;
-style.setProperty("--eyesX", "0px");
 
 const leftEye = document.querySelector(".profile-pic .left-eye.dot");
 const leftEy = document.querySelector(".profile-pic .left-eye.dot .left-eye");
 const rightEye = document.querySelector(".profile-pic .right-eye.dot");
 const rightEy = document.querySelector(".profile-pic .right-eye.dot .right-eye");
-
-console.log(leftEye);
 
 
 document.addEventListener('mousemove', function (event) {

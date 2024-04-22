@@ -1,12 +1,15 @@
+@import "variables";
+
 .second-section {
     display: flex;
-    flex-direction: column; //
+    flex-direction: column;
     margin-bottom: 100px;
 
     &>div:first-of-type {
         display: flex;
-        color: $font-color;
-        margin-bottom: 20px; //
+        color: var(--font-color);
+        margin-bottom: 20px;
+        transition: color var(--time);
 
         .profile {
             display: flex;
@@ -27,7 +30,7 @@
                 overflow: hidden;
                 width: 120px;
                 height: 120px;
-                background-color: $bgc-third;
+                background-color: var(--bgc-third);
                 border-radius: 100px;
                 box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
                 transform: translatey(0px);
@@ -112,7 +115,7 @@
                 text-transform: uppercase;
                 font-weight: 600;
                 letter-spacing: 1px;
-                color: $font-color-second;
+                color: var(--font-color-second);
                 transition: .6s;
                 animation: slide-show .5s 1.5s reverse forwards linear;
 
@@ -122,9 +125,8 @@
         .navigation {
             display: flex;
             flex-direction: column;
-            // width: 160px;//
-            width: 60%; //
-            max-width: 200px; //
+            width: 60%; 
+            max-width: 200px; 
             height: auto;
             font-size: 1.1rem;
             font-weight: 600;
@@ -132,13 +134,12 @@
             box-sizing: border-box;
             padding: 25px 0;
 
-            //here
             span {
                 display: flex;
                 align-items: center;
                 margin: 5px 15px;
                 padding: 15px 0;
-                color: $font-color-fourth;
+                color: var(--font-color-fourth);
                 cursor: pointer;
                 transition: .5s;
                 transform: scale(.8);
@@ -155,24 +156,25 @@
 
                 &:nth-of-type(3) {
                     animation: 1s 2.4s fade-in forwards;
-                    margin-bottom: 0; //
+                    margin-bottom: 0; 
                 }
 
                 &::before {
                     content: "";
-                    width: 15px; //
+                    width: 15px;
                     height: 1.5px;
                     margin-right: 10px;
-                    background-color: $line-color;
+                    background-color: var(--line-color);
                     transition: .5s;
                 }
 
                 &.active {
-                    color: $font-color;
+                    color: var(--font-color);
 
                     &::before {
-                        width: 35px; //
-                        background-color: $line-color-second;
+                        width: 35px;
+                        background-color: var(--line-color-second);
+                        transition: .5s;
                     }
                 }
             }
@@ -180,6 +182,7 @@
     }
 
     .navigation-contents {
+        position: relative;
         flex-basis: 100%;
         max-width: 1000px;
 
@@ -220,7 +223,8 @@
                 flex-grow: 1;
                 height: 2px;
                 max-width: 250px;
-                background-color: $line-color;
+                background-color: var(--line-color);
+                transition: background-color var(--time);
             }
         }
 
@@ -229,14 +233,16 @@
             margin-top: 20px;
             padding: 0px 20px;
             font-size: 1.5rem;
-            color: $font-color-second;
+            color: var(--font-color-second);
+            transition: color var(--time);
 
             h2 {
                 margin-bottom: 2px;
-                color: $font-color;
+                color: var(--font-color);
                 font-size: 1.8rem;
                 font-weight: 500;
                 letter-spacing: .5px;
+                transition: color var(--time);
             }
 
             p {
@@ -249,7 +255,8 @@
             }
 
             span {
-                color: $font-color-third;
+                color: var(--font-color-third);
+                transition: color var(--time);
             }
         }
 
@@ -258,11 +265,12 @@
 
             &>p {
                 top: -40px;
-                color: $font-color;
-                font-size: clamp(1rem, 3.5vw, 1.4rem); //
+                color: var(--font-color);
+                font-size: clamp(1rem, 3.5vw, 1.4rem);
                 font-weight: 600;
                 letter-spacing: 2px;
                 text-transform: uppercase;
+                transition: color var(--time);
 
                 &::after {
                     content: "";
@@ -272,7 +280,8 @@
                     translate: -50% -50%;
                     width: 60%;
                     height: 1px;
-                    background-color: $line-color;
+                    background-color: var(--line-color);
+                    transition: background-color var(--time);
                 }
             }
 
@@ -294,14 +303,14 @@
 
                 &.active {
                     .stat-name {
-                        background-color: $bgc-second;
+                        background-color: var(--bgc-second);
 
                         i {
-                            color: $font-color-third;
+                            color: var(--font-color-third);
                         }
 
                         span {
-                            color: $font-color;
+                            color: var(--font-color);
                         }
                     }
 
@@ -325,7 +334,7 @@
                     i {
                         margin-bottom: 8px;
                         font-size: 2rem;
-                        color: $font-color-fourth;
+                        color: var(--font-color-fourth);
                         transition: color .5s;
                     }
 
@@ -334,7 +343,7 @@
                         font-size: 1.1rem;
                         font-weight: 600;
                         letter-spacing: 2px;
-                        color: $font-color-fourth;
+                        color: var(--font-color-fourth);
                         transition: color .5s;
                     }
 
@@ -360,7 +369,7 @@
                             font-size: 1.2rem;
                             font-weight: 600;
                             letter-spacing: 2px;
-                            color: $font-color-second;
+                            color: var(--font-color-second);
                             user-select: none;
                             transition: color .5s;
                         }
@@ -378,13 +387,12 @@
 }
 
 .about-me.block {
-    background: linear-gradient($bgc-second 24%, $bgc 38%);
+    background: linear-gradient(var(--bgc-second) 24%, var(--bgc) 38%);
 }
 
 .icon {
-    // display: none;
-    width: 30px; //
-    height: 30px; //
+    width: 30px;
+    height: 30px;
     left: -30px;
     background-position: center;
     background-size: contain;
@@ -393,91 +401,91 @@
     transition: filter .5s;
 
     &.java {
-        background-image: url('/assets/img/java-logo.png');
+        background-image: url('../img/java-logo.png');
     }
 
     &.javascript {
-        background-image: url('/assets/img/js-logo.png');
+        background-image: url('../img/js-logo.png');
     }
 
     &.html {
-        background-image: url('/assets/img/html-logo.png');
+        background-image: url('../img/html-logo.png');
     }
 
     &.css {
-        background-image: url('/assets/img/css-logo.png');
+        background-image: url('../img/css-logo.png');
     }
 
     &.sql {
-        background-image: url('/assets/img/sql-logo.png');
+        background-image: url('../img/sql-logo.png');
     }
 
     &.spring {
-        background-image: url('/assets/img/spring-logo.png');
+        background-image: url('../img/spring-logo.png');
     }
 
     &.jpa {
-        background-image: url('/assets/img/jpa-logo.png');
+        background-image: url('../img/jpa-logo.png');
     }
 
     &.security {
-        background-image: url('/assets/img/security-logo.png');
+        background-image: url('../img/security-logo.png');
     }
 
     &.web {
-        background-image: url('/assets/img/web-logo.png');
+        background-image: url('../img/web-logo.png');
     }
 
     &.hibernate {
-        background-image: url('/assets/img/hibernate-logo.png');
+        background-image: url('../img/hibernate-logo.png');
     }
 
     &.playwright {
-        background-image: url('/assets/img/playwright-logo.png');
+        background-image: url('../img/playwright-logo.png');
     }
 
     &.docker {
-        background-image: url('/assets/img/docker-logo.png');
+        background-image: url('../img/docker-logo.png');
     }
 
     &.git {
-        background-image: url('/assets/img/git-logo.png');
+        background-image: url('../img/git-logo.png');
     }
 
     &.maven {
-        background-image: url('/assets/img/maven-logo.png');
+        background-image: url('../img/maven-logo.png');
     }
 
     &.junit {
-        background-image: url('/assets/img/junit-logo.png');
+        background-image: url('../img/junit-logo.png');
     }
 
     &.thymeleaf {
-        background-image: url('/assets/img/thymeleaf-logo.png');
+        background-image: url('../img/thymeleaf-logo.png');
     }
 
     &.htmx {
-        background-image: url('/assets/img/htmx-logo.png');
+        background-image: url('../img/htmx-logo.png');
     }
 
     &.scss {
-        background-image: url('/assets/img/scss-logo.png');
+        background-image: url('../img/scss-logo.png');
     }
 
     &.intellij {
-        background-image: url('/assets/img/intellij-logo.png');
+        background-image: url('../img/intellij-logo.png');
     }
 
     &.visual {
-        background-image: url('/assets/img/visual-logo.png');
+        background-image: url('../img/visual-logo.png');
     }
 
     &.postresql {
-        background-image: url('/assets/img/postresql-logo.png');
+        background-image: url('../img/postresql-logo.png');
     }
 
     &.photopea {
-        background-image: url('/assets/img/photopea-logo.png');
+        background-image: url('../img/photopea-logo.png');
     }
 }
 
@@ -545,12 +553,12 @@
 
                 &:hover {
                     .profile-pic {
-                        background-color: #122545;
+                        background-color: var(--bgc-second);
                     }
 
                     p {
                         translate: -50% -15px;
-                        color: $font-color;
+                        color: var(--font-color);
                     }
                 }
             }
@@ -558,11 +566,11 @@
             .navigation {
                 span {
                     &:hover {
-                        color: $font-color;
+                        color: var(--font-color);
 
                         &::before {
                             width: 70px;
-                            background-color: $line-color-second;
+                            background-color: var(--line-color-second);
                         }
                     }
                 }
@@ -603,22 +611,24 @@
 
                         i {
                             font-size: 2.3rem;
-                            color: $font-color-third;
+                            color: var(--font-color-third);
+                            transition: color var(--time);
                         }
-
+                        
                         span {
                             font-size: 1.3rem;
-                            color: $font-color-second;
+                            color: var(--font-color-second);
+                            transition: color var(--time);
                         }
 
                     }
 
                     &.active {
                         .stat-name {
-                            background-color: $bgc;
+                            background-color: var(--bgc);
 
                             span {
-                                color: $font-color-second;
+                                color: var(--font-color-second);
                             }
                         }
 
@@ -650,7 +660,7 @@
                                 }
 
                                 span {
-                                    color: $font-color;
+                                    color: var(--font-color);
                                 }
                             }
 

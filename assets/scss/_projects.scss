@@ -1,7 +1,7 @@
 @import "variables";
 
 .block.projects {
-    background: linear-gradient($bgc-second 5%, $bgc 14%);
+    background: linear-gradient(var(--bgc-second) 5%, var(--bgc) 14%);
 }
 
 .projects {
@@ -72,7 +72,7 @@
                 translate: 0 0;
 
                 h2 {
-                    font-family: $font-second;
+                    font-family: var(--font-second);
                     font-size: 2.5rem;
                     font-weight: 600;
                     text-align: start;
@@ -87,24 +87,26 @@
                     translate: 0 0;
 
                     a {
-                        color: $font-color-second;
+                        color: var(--font-color-second);
                         font-size: 1.9rem;
                         margin-right: 12px;
+                        transition: color var(--time);
                     }
-
+                    
                     a:last-of-type {
                         margin-right: 0;
                     }
                 }
             }
-
+            
             p {
                 margin-bottom: 5px;
                 font-size: 1.5rem;
                 line-height: 23px;
                 font-weight: 300;
                 text-align: left;
-                color: $font-color-second;
+                color: var(--font-color-second);
+                transition: color var(--time);
             }
 
             .languages-used {
@@ -119,7 +121,7 @@
                     margin-right: 20px;
                     font-size: 1.2rem;
                     letter-spacing: 1px;
-                    font-family: $font-third;
+                    font-family: var(--font-third);
                     text-transform: uppercase;
 
                     span {
@@ -199,8 +201,9 @@
                 translate: 0 -50%;
                 margin-top: 10px;
                 padding: 25px;
-                background-color: $bgc-second;
+                background-color: var(--bgc-second);
                 box-shadow: rgba(2, 12, 27, 0.7) 0px 20px 30px -15px;
+                transition: background-color var(--time);
 
 
                 &::before {
@@ -233,7 +236,7 @@
                             transition: color .5s;
 
                             &:hover {
-                                color: $font-color-third;
+                                color: var(--font-color-third);
                             }
                         }
 

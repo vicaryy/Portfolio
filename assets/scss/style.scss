@@ -23,8 +23,9 @@ body {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    background-color: $bgc;
-    font-family: $font;
+    background-color: var(--bgc);
+    font-family: var(--font);
+    transition: background-color var(--time);
     // cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='28' fill='none' viewBox='0 0 26 31'%3E%3Cpath fill='%23010101' fill-rule='evenodd' stroke='%23fff' stroke-linecap='square' stroke-width='1.5' d='M21.993 14.425 2.549 2.935l4.444 23.108 4.653-10.002 10.347-1.616Z' clip-rule='evenodd'/%3E%3C/svg%3E"), auto;
 }
 
@@ -37,8 +38,9 @@ body {
 
 section {
     margin: 0 2rem;
-    font-family: $font;
-    color: $font-color;
+    font-family: var(--font);
+    color: var(--font-color);
+    transition: color var(--time);
 
     @media (min-width: 1000px) {
         margin: 0 clamp(2rem, 10vw, 150rem);
@@ -46,8 +48,9 @@ section {
 }
 
 .block {
-    background-color: $bgc-second;
-    border-radius: 15px
+    background-color: var(--bgc-second);
+    border-radius: 15px;
+    transition: background-color var(--time);
 }
 
 .absolute-center {
@@ -66,12 +69,13 @@ ul {
 }
 
 hl {
-    color: $font-color-third;
+    color: var(--font-color-third);
+    transition: color var(--time);
 }
 
 @import "first-section";
 @import "second-section";
 @import "projects";
 @import "contact";
+@import "mode_toggler";
 @import "footer";
-@import "test";
