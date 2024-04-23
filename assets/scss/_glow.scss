@@ -1,0 +1,20 @@
+.glow {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 1000px;
+    height: 1000px;
+    // background-color: white;
+    z-index: -1;
+    opacity: 0;
+    background: radial-gradient(rgba(53, 121, 255, 0.05) .1%, transparent, transparent);
+    animation: slide-show .5s 1.2s reverse forwards linear;
+}
+
+@media(min-width: 1200px) {
+    .glow {
+        display: block;
+    }
+}

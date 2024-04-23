@@ -1,7 +1,7 @@
 @import "variables";
 
 .block.projects {
-    background: linear-gradient(var(--bgc-second) 5%, var(--bgc) 14%);
+    background: linear-gradient(var(--bgc-second) 5%, transparent 14%);
 }
 
 .projects {
@@ -62,7 +62,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                background-color: rgba(11, 25, 54, .7);
+                background-color: var(--bgc-fourth);
                 filter: brightness(1.1);
                 z-index: -1;
             }
@@ -141,19 +141,19 @@
     }
 
     .project:nth-of-type(1) .p-description::before {
-        background-image: url("/assets/img/pricety-logo.jpg");
+        background-image: url("../img/pricety-logo.jpg");
     }
 
     .project:nth-of-type(2) .p-description::before {
-        background-image: url("/assets/img/pricety-telegram-logo.jpg");
+        background-image: url("../img/pricety-telegram-logo.jpg");
     }
 
     .project:nth-of-type(3) .p-description::before {
-        background-image: url("/assets/img/botload-logo.jpg");
+        background-image: url("../img/botload-logo.jpg");
     }
 
     .project:nth-of-type(4) .p-description::before {
-        background-image: url("/assets/img/projects-logo.jpg");
+        background-image: url("../img/projects-logo.jpg");
     }
 }
 

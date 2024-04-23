@@ -40,7 +40,7 @@
                 .image {
                     visibility: hidden;
                     width: 100%;
-                    translate: 0 100%;
+                    translate: 0 120px;
                     animation: profile-pic-slide 1.5s 1s forwards;
                 }
 
@@ -51,7 +51,7 @@
                     left: 0;
                     width: 100%;
                     z-index: 3;
-                    translate: 0 100%;
+                    translate: 0 120px;
                     animation: profile-pic-slide 1.5s 1s forwards;
                 }
 
@@ -59,9 +59,9 @@
                     position: absolute;
                     height: 2px;
                     width: 2px;
-                    background-color: red;
+                    // background-color: red;
                     z-index: 1;
-                    translate: 0 139px;
+                    translate: 0 120px;
                     animation: eyes-slide 1.5s 1s forwards;
 
                     &>div {
@@ -73,7 +73,7 @@
                         translate: -20% -55%;
                         background-color: #011229;
                         border-radius: 100%;
-                        filter: blur(.2px);
+                        opacity: .9;
 
 
                         &>span {
@@ -118,7 +118,6 @@
                 color: var(--font-color-second);
                 transition: .6s;
                 animation: slide-show .5s 1.5s reverse forwards linear;
-
             }
         }
 
@@ -173,6 +172,7 @@
 
                     &::before {
                         width: 35px;
+                        height: 2px;
                         background-color: var(--line-color-second);
                         transition: .5s;
                     }
@@ -387,7 +387,7 @@
 }
 
 .about-me.block {
-    background: linear-gradient(var(--bgc-second) 24%, var(--bgc) 38%);
+    background: linear-gradient(var(--bgc-second) 24%, transparent 38%);
 }
 
 .icon {
@@ -508,7 +508,6 @@
                 width: 200px;
                 font-size: 1.2rem;
 
-                //here
                 span {
                     &::before {
                         width: 25px;
@@ -625,7 +624,7 @@
 
                     &.active {
                         .stat-name {
-                            background-color: var(--bgc);
+                            background-color: transparent;
 
                             span {
                                 color: var(--font-color-second);

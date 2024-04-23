@@ -2,41 +2,59 @@
     --bgc: #0A192F;
     --bgc-second: #112240;
     --bgc-third: #1A3462;
-
-    --bgc-n: #0A192F;
-    --bgc-second-n: #112240;
-    --bgc-third-n: #1A3462;
-
-    --bgc-d: #EEE;
-    --bgc-second-d: #C3E4E9;
-    --bgc-third-d: #88B4BE;
-
+    --bgc-fourth: rgba(10, 25, 47, 0.7);
 
     --font-color: #CCD6F6;
     --font-color-second: #8892B0;
     --font-color-third: #60F7D4;
     --font-color-fourth: #64748B;
 
+    --line-color: rgba(136, 146, 176, .3);
+    --line-color-second: #CCD6F6;
+
+
+
+    --bgc-n: #0A192F;
+    --bgc-second-n: #112240;
+    --bgc-third-n: #1A3462;
+    --bgc-fourth-n: rgba(10, 25, 47, 0.6);
+
     --font-color-n: #CCD6F6;
     --font-color-second-n: #8892B0;
     --font-color-third-n: #60F7D4;
     --font-color-fourth-n: #64748B;
 
-    --font-color-d: #000;
-    --font-color-second-d: #023653;
-    --font-color-third-d: #4ca9ff;
-    --font-color-fourth-d: #056C89;
-
-
-
-    --line-color: rgba(136, 146, 176, .3);
-    --line-color-second: #CCD6F6;
-
     --line-color-n: rgba(136, 146, 176, .3);
     --line-color-second-n: #CCD6F6;
 
-    --line-color-d: rgba(32, 32, 32, 0.3);
-    --line-color-second-d: #4ca9ff;
+
+
+    --bgc-d: #ffffff;
+    --bgc-second-d: #f5f5f7;
+    --bgc-third-d: #dcdcf0;
+    --bgc-fourth-d: rgba(244, 249, 252, 0.6);
+
+    --font-color-d: #000;
+    --font-color-second-d: #6e6e73;
+    --font-color-third-d: #0066cc;
+    --font-color-fourth-d: #056C89;
+
+    --line-color-d: #8c94b5;
+    --line-color-second-d: #0066cc;
+
+    // --bgc-d: #EEE;
+    // --bgc-second-d: #C3E4E9;
+    // --bgc-third-d: #88B4BE;
+    // --bgc-fourth-d: rgba(238, 238, 238, 0.6);
+
+    // --font-color-d: #000;
+    // --font-color-second-d: #023653;
+    // --font-color-third-d: #4ca9ff;
+    // --font-color-fourth-d: #056C89;
+
+    // --line-color-d: rgba(32, 32, 32, 0.3);
+    // --line-color-second-d: #4ca9ff;
+
 
     --font: "Inter", "Arial";
     --font-second: "Inter Tight", "Arial";

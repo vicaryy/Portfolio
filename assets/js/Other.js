@@ -19,6 +19,7 @@ function switchToNightMode() {
     style.setProperty("--bgc", style.getPropertyValue("--bgc-n"));
     style.setProperty("--bgc-second", style.getPropertyValue("--bgc-second-n"));
     style.setProperty("--bgc-third", style.getPropertyValue("--bgc-third-n"));
+    style.setProperty("--bgc-fourth", style.getPropertyValue("--bgc-fourth-n"));
     style.setProperty("--font-color", style.getPropertyValue("--font-color-n"));
     style.setProperty("--font-color-second", style.getPropertyValue("--font-color-second-n"));
     style.setProperty("--font-color-third", style.getPropertyValue("--font-color-third-n"));
@@ -33,6 +34,7 @@ function switchToDayMode() {
     docTo.style.setProperty("--bgc", docFrom.getPropertyValue("--bgc-d"));
     docTo.style.setProperty("--bgc-second", docFrom.getPropertyValue("--bgc-second-d"));
     docTo.style.setProperty("--bgc-third", docFrom.getPropertyValue("--bgc-third-d"));
+    docTo.style.setProperty("--bgc-fourth", docFrom.getPropertyValue("--bgc-fourth-d"));
     docTo.style.setProperty("--font-color", docFrom.getPropertyValue("--font-color-d"));
     docTo.style.setProperty("--font-color-second", docFrom.getPropertyValue("--font-color-second-d"));
     docTo.style.setProperty("--font-color-third", docFrom.getPropertyValue("--font-color-third-d"));
