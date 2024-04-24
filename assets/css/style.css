@@ -647,6 +647,10 @@ hl {
       flex-basis: 100%;
   max-width: 1000px;
 }
+.second-section .navigation-contents .navigation-content.about-me .navigation-content-wrapper {
+  -webkit-animation: 1s 2.6s fade-in forwards;
+          animation: 1s 2.6s fade-in forwards;
+}
 .second-section .navigation-contents .navigation-content-wrapper {
   opacity: 0;
   -webkit-animation: 1s fade-in forwards;
