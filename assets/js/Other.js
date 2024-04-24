@@ -42,3 +42,34 @@ function switchToDayMode() {
     docTo.style.setProperty("--line-color", docFrom.getPropertyValue("--line-color-d"));
     docTo.style.setProperty("--line-color-second", docFrom.getPropertyValue("--line-color-second-d"));
 }
+
+
+const projectsVideoElement = document.querySelector(".projects-video");
+
+document.querySelector(".play-video-btn").addEventListener("click", () => {
+    addActiveClass(projectsVideoElement);
+})
+
+projectsVideoElement.querySelector("iframe").addEventListener("ended", () => {
+});
+
+document.querySelector(".projects-video-x-btn").addEventListener("click", () => {    // removeActiveClass(projectsVideoElement);
+    removeActiveClass(projectsVideoElement);
+    setTimeout(() => {
+        const iframe = projectsVideoElement.querySelector("iframe");
+        iframe.remove();
+        var e = document.createElement("iframe");
+        e.src = "https://www.youtube.com/embed/8wQwolantI4?si=5CZd7Y1NMlf7lPNZ";
+        e.setAttribute("title", "Mini Projects")
+        e.setAttribute("frameborder", "0");
+        e.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+        projectsVideoElement.appendChild(e)
+    }, 1000)
+    // const targetOrigin = iframe.contentWindow.origin;
+    // const message = { event: 'pause' };
+    // iframe.contentWindow.postMessage(message, targetOrigin);
+    // console.log(iframe);
+    // player.contentWindow.postMessage('{"event":"command","func":"pause","args":""}', '*');
+    // removeActiveClass(projectsVideoElement);
+    // projectsVideoElement.src = projectsVideoElement.src;
+})

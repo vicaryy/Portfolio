@@ -17,29 +17,11 @@
         color: var(--font-color-third);
         font-family: var(--font-third);
         font-size: 1.5rem;
-        // letter-spacing: -5px;
         cursor: pointer;
         z-index: 1;
         box-sizing: border-box;
         transition: .1s;
         animation: slide-show .5s 1s reverse forwards linear;
-
-        &:hover {
-            width: 142px;
-            color: var(--font-color);
-            border: 2px solid var(--bgc-second);
-            background-color: transparent;
-
-            span {
-                animation: moveOver 1s linear forwards;
-            }
-
-            div {
-                // translate: 0 -5px;
-                display: block;
-                animation: fallDown 1s linear forwards;
-            }
-        }
 
         span {
             position: absolute;
@@ -116,24 +98,26 @@
             top: 80px;
             right: 12%;
 
-            // &:hover {
-            //     width: 142px;
-            //     color: var(--font-color);
-            //     border: 2px solid var(--bgc-second);
-            //     background-color: transparent;
+            &:hover {
+                width: 142px;
+                color: var(--font-color);
+                border: 2px solid var(--bgc-second);
+                background-color: transparent;
 
-            //     div {
-            //         // translate: -102px -50%;
-            //     }
-            // }
+                span {
+                    animation: moveOver 1s linear forwards;
+                }
 
-            div {
-                // display: block;
-                // translate: 0 0;
+                div {
+                    // translate: 0 -5px;
+                    display: block;
+                    animation: fallDown 1s linear forwards;
+                }
             }
         }
     }
 }
+
 @keyframes moveOver {
     0% {
         translate: -20px -50%;
@@ -147,17 +131,18 @@
         translate: -10px -50%;
     }
 }
+
 @keyframes fallDown {
     0% {
         translate: 0px -50px;
         transform: rotate(90deg);
     }
-    
+
     30% {
         translate: 0px -5px;
         transform: rotate(90deg);
     }
-    
+
     50% {
         translate: 0px -5px;
         transform: rotate(90deg);
@@ -167,73 +152,13 @@
         translate: -5px -30px;
         transform: rotate(45deg);
     }
+
     100% {
         translate: -10px -50%;
         transform: rotate(0deg);
     }
 }
 
-// @keyframes toRightAndLeft {
-//     0% {
-//         translate: -20px -50%;
-//     }
-//     30% {
-//         translate: 20px -50%;
-//     }
-//     35% {
-//         translate: 21px -50%;
-//     }
-//     40% {
-//         translate: 22px -50%;
-//     }
-//     45% {
-//         translate: 23px -50%;
-//     }
-//     50% {
-//         translate: 24px -50%;
-//     }
-//     55% {
-//         translate: 25px -50%;
-//     }
-//     60% {
-//         translate: 26px -50%;
-//     }
-
-//     100% {
-//         translate: 0px -50%;
-//     }
-// }
-
-// @keyframes fontShrink {
-//     0% {
-//         letter-spacing: 0px;
-//     }
-
-//     30% {
-//         letter-spacing: -1.5px;
-//     }
-//     35% {
-//         letter-spacing: -1.6px;
-//     }
-//     40% {
-//         letter-spacing: -1.7px;
-//     }
-//     45% {
-//         letter-spacing: -1.8px;
-//     }
-//     50% {
-//         letter-spacing: -1.9px;
-//     }
-//     55% {
-//         letter-spacing: -2.0px;
-//     }
-//     60% {
-//         letter-spacing: -2.1px;
-//     }
-//     100% {
-//        letter-spacing: 0px; 
-//     }
-// }
 
 @keyframes sliderr {
     0% {
@@ -256,144 +181,3 @@
         opacity: 1;
     }
 }
-
-// @import "variables";
-
-// .content {
-//     position: relative;
-
-//     .cv {
-//         overflow: hidden;
-//         position: absolute;
-//         opacity: 0;
-//         top: 40px;
-//         right: 15px;
-//         width: 112px;
-//         padding: 21px 25px;
-//         border: 2px solid transparent;
-//         border-radius: 30px;
-//         background-color: var(--bgc-second);
-//         color: var(--font-color-third);
-//         font-family: var(--font-third);
-//         font-size: 1.5rem;
-//         // letter-spacing: -5px;
-//         cursor: pointer;
-//         z-index: 1;
-//         box-sizing: border-box;
-//         transition: .5s;
-//         animation: slide-show .5s 1s reverse forwards linear;
-
-//         span {
-//             position: absolute;
-//             right: 0;
-//             top: 50%;
-//             translate: -20px -50%;
-//         }
-
-//         div {
-//             display: none;
-//             position: absolute;
-//             right: 0;
-//             top: 50%;
-//             translate: -142px -45px;
-//             font-size: 1.8rem;
-//             transition: .5s;
-//         }
-//     }
-// }
-
-// .first-section {
-//     overflow: hidden;
-//     position: relative;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-//     margin-top: 100px; 
-//     margin-bottom: 50px; 
-
-
-//     p {
-//         margin-bottom: 20px;
-//         font-family: 'SF Mono', sans-serif;
-//         font-weight: 400;
-//         font-size: clamp(14px, 5vw, 16px);
-//         color: var(--font-color-third);
-//         transition: color var(--time);
-//     }
-
-//     h1 {
-//         font-family: var(--font-second);
-//         font-size: clamp(3.5rem, 7vw, 6rem);
-//         color: var(--font-color);
-//         letter-spacing: 1px;
-//         font-weight: 600;
-//         transition: color var(--time);
-//     }
-
-//     h3 {
-//         font-size: clamp(2.5rem, 4vw, 4.5rem);
-//         color: var(--font-color-second);
-//         letter-spacing: 1px;
-//         font-weight: 600;
-//         transition: color var(--time);
-//     }
-// }
-
-// .first-section>*::after {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: var(--bgc);
-//     transition: background-color var(--time);
-//     animation: sliderr 1s .3s ease-out forwards;
-// }
-
-// @media(min-width: 1200px) {
-//     .content {
-//         .cv {
-//             top: 80px;
-//             right: 12%;
-
-//             &:hover {
-//                 width: 142px;
-//                 color: var(--font-color);
-//                 border: 2px solid var(--bgc-second);
-//                 background-color: transparent;
-
-//                 div {
-//                     translate: -102px -50%;
-//                 }
-//             }
-
-//             div {
-//                 display: block;
-//                 translate: -102px -45px;
-//             }
-//         }
-//     }
-// }
-
-// @keyframes sliderr {
-//     0% {
-//         width: 100%;
-//     }
-
-//     99% {
-//         transform: translateX(100%);
-//         width: 100%;
-//     }
-
-//     100% {
-//         width: 0px;
-//     }
-// }
-
-// @keyframes slide-show {
-//     from {
-//         transform: translateY(-10px);
-//         opacity: 1;
-//     }
-// }

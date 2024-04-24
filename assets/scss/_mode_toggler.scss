@@ -47,6 +47,7 @@
         font-weight: 600;
         letter-spacing: .5px;
         color: var(--font-color-second);
+        transition: color var(--time);
         animation: fade-in 1s;
     }
 
@@ -86,6 +87,19 @@
 @media(min-width: 700px) {
     .mode-toggler {
         top: -28px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .mode-toggler {
+        &:hover {
+            .toggle {
+                background-color: var(--font-color);
+            }
+            span {
+                color: var(--font-color);
+            }
+        }
     }
 }
 
