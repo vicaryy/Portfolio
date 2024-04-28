@@ -134,6 +134,16 @@
 @media(min-width: 1200px) {
     .navigation-content.contact {
 
+        .description.lets-talk {
+    
+            .c-hyperlinks {
+    
+                a:hover {
+                    color: var(--font-color-third);
+                }
+            }
+        }
+
         form {
             margin-top: 40px;
             &>div {

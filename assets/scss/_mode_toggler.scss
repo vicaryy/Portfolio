@@ -12,7 +12,7 @@
     transition: 1s;
     cursor: pointer;
     opacity: 0;
-    animation: slide-show .5s 1s reverse forwards linear;
+    animation: slide-show .5s calc(var(--animationDelay) + 1s) reverse forwards linear;
     transition: top 0s;
 
     .toggle {

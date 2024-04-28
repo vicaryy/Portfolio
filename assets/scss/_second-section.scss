@@ -41,7 +41,7 @@
                     visibility: hidden;
                     width: 100%;
                     translate: 0 120px;
-                    animation: profile-pic-slide 1.5s 1s forwards;
+                    animation: profile-pic-slide 1.5s calc(var(--animationDelay) + 1s) forwards;
                 }
 
                 .image-test {
@@ -52,7 +52,7 @@
                     width: 100%;
                     z-index: 3;
                     translate: 0 120px;
-                    animation: profile-pic-slide 1.5s 1s forwards;
+                    animation: profile-pic-slide 1.5s calc(var(--animationDelay) + 1s) forwards;
                 }
 
                 .dot {
@@ -62,7 +62,7 @@
                     // background-color: red;
                     z-index: 1;
                     translate: 0 120px;
-                    animation: eyes-slide 1.5s 1s forwards;
+                    animation: eyes-slide 1.5s calc(var(--animationDelay) + 1s) forwards;
 
                     &>div {
                         position: absolute;
@@ -117,7 +117,7 @@
                 letter-spacing: 1px;
                 color: var(--font-color-second);
                 transition: .6s;
-                animation: slide-show .5s 1.5s reverse forwards linear;
+                animation: slide-show .5s calc(var(--animationDelay) + 1.5s) reverse forwards linear;
             }
         }
 
@@ -145,16 +145,16 @@
                 opacity: 0;
 
                 &:nth-of-type(1) {
-                    animation: 1s 2s fade-in forwards;
+                    animation: 1s calc(var(--animationDelay) + 2s) fade-in forwards;
                     margin-top: 0; //
                 }
 
                 &:nth-of-type(2) {
-                    animation: 1s 2.2s fade-in forwards;
+                    animation: 1s calc(var(--animationDelay) + 2.2s) fade-in forwards;
                 }
 
                 &:nth-of-type(3) {
-                    animation: 1s 2.4s fade-in forwards;
+                    animation: 1s calc(var(--animationDelay) + 2.4s) fade-in forwards;
                     margin-bottom: 0; 
                 }
 
@@ -187,7 +187,7 @@
         max-width: 1000px;
 
         .navigation-content.about-me .navigation-content-wrapper {
-            animation: 1s 2.6s fade-in forwards;
+            animation: 1s calc(var(--animationDelay) + 2.6s) fade-in forwards;
         }
 
         .navigation-content-wrapper {

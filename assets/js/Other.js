@@ -65,11 +65,4 @@ document.querySelector(".projects-video-x-btn").addEventListener("click", () => 
         e.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
         projectsVideoElement.appendChild(e)
     }, 1000)
-    // const targetOrigin = iframe.contentWindow.origin;
-    // const message = { event: 'pause' };
-    // iframe.contentWindow.postMessage(message, targetOrigin);
-    // console.log(iframe);
-    // player.contentWindow.postMessage('{"event":"command","func":"pause","args":""}', '*');
-    // removeActiveClass(projectsVideoElement);
-    // projectsVideoElement.src = projectsVideoElement.src;
 })

@@ -33,6 +33,7 @@
   --font-second: "Inter Tight", "Arial";
   --font-third: "SF Mono", "Arial";
   --time: .5s;
+  --animationDelay: .7s;
 }
 
 * {
@@ -165,6 +166,7 @@ hl {
   --font-second: "Inter Tight", "Arial";
   --font-third: "SF Mono", "Arial";
   --time: .5s;
+  --animationDelay: .7s;
 }
 
 .content {
@@ -190,7 +192,7 @@ hl {
           box-sizing: border-box;
   -webkit-transition: 0.1s;
   transition: 0.1s;
-  animation: slide-show 0.5s 1s reverse forwards linear;
+  animation: slide-show 0.5s calc(var(--animationDelay) + 1s) reverse forwards linear;
 }
 .content .cv span {
   position: absolute;
@@ -264,8 +266,8 @@ hl {
   background-color: var(--bgc);
   -webkit-transition: background-color var(--time);
   transition: background-color var(--time);
-  -webkit-animation: sliderr 1s 0.3s ease-out forwards;
-          animation: sliderr 1s 0.3s ease-out forwards;
+  -webkit-animation: sliderr 1s var(--animationDelay) ease-out forwards;
+          animation: sliderr 1s var(--animationDelay) ease-out forwards;
 }
 
 @media (min-width: 1200px) {
@@ -440,6 +442,7 @@ hl {
   --font-second: "Inter Tight", "Arial";
   --font-third: "SF Mono", "Arial";
   --time: .5s;
+  --animationDelay: .7s;
 }
 
 .second-section {
@@ -501,8 +504,8 @@ hl {
   visibility: hidden;
   width: 100%;
   translate: 0 120px;
-  -webkit-animation: profile-pic-slide 1.5s 1s forwards;
-          animation: profile-pic-slide 1.5s 1s forwards;
+  -webkit-animation: profile-pic-slide 1.5s calc(var(--animationDelay) + 1s) forwards;
+          animation: profile-pic-slide 1.5s calc(var(--animationDelay) + 1s) forwards;
 }
 .second-section > div:first-of-type .profile .profile-pic .image-test {
   visibility: hidden;
@@ -512,8 +515,8 @@ hl {
   width: 100%;
   z-index: 3;
   translate: 0 120px;
-  -webkit-animation: profile-pic-slide 1.5s 1s forwards;
-          animation: profile-pic-slide 1.5s 1s forwards;
+  -webkit-animation: profile-pic-slide 1.5s calc(var(--animationDelay) + 1s) forwards;
+          animation: profile-pic-slide 1.5s calc(var(--animationDelay) + 1s) forwards;
 }
 .second-section > div:first-of-type .profile .profile-pic .dot {
   position: absolute;
@@ -521,8 +524,8 @@ hl {
   width: 2px;
   z-index: 1;
   translate: 0 120px;
-  -webkit-animation: eyes-slide 1.5s 1s forwards;
-          animation: eyes-slide 1.5s 1s forwards;
+  -webkit-animation: eyes-slide 1.5s calc(var(--animationDelay) + 1s) forwards;
+          animation: eyes-slide 1.5s calc(var(--animationDelay) + 1s) forwards;
 }
 .second-section > div:first-of-type .profile .profile-pic .dot > div {
   position: absolute;
@@ -571,7 +574,7 @@ hl {
   color: var(--font-color-second);
   -webkit-transition: 0.6s;
   transition: 0.6s;
-  animation: slide-show 0.5s 1.5s reverse forwards linear;
+  animation: slide-show 0.5s calc(var(--animationDelay) + 1.5s) reverse forwards linear;
 }
 .second-section > div:first-of-type .navigation {
   display: -webkit-box;
@@ -609,17 +612,17 @@ hl {
   opacity: 0;
 }
 .second-section > div:first-of-type .navigation span:nth-of-type(1) {
-  -webkit-animation: 1s 2s fade-in forwards;
-          animation: 1s 2s fade-in forwards;
+  -webkit-animation: 1s calc(var(--animationDelay) + 2s) fade-in forwards;
+          animation: 1s calc(var(--animationDelay) + 2s) fade-in forwards;
   margin-top: 0;
 }
 .second-section > div:first-of-type .navigation span:nth-of-type(2) {
-  -webkit-animation: 1s 2.2s fade-in forwards;
-          animation: 1s 2.2s fade-in forwards;
+  -webkit-animation: 1s calc(var(--animationDelay) + 2.2s) fade-in forwards;
+          animation: 1s calc(var(--animationDelay) + 2.2s) fade-in forwards;
 }
 .second-section > div:first-of-type .navigation span:nth-of-type(3) {
-  -webkit-animation: 1s 2.4s fade-in forwards;
-          animation: 1s 2.4s fade-in forwards;
+  -webkit-animation: 1s calc(var(--animationDelay) + 2.4s) fade-in forwards;
+          animation: 1s calc(var(--animationDelay) + 2.4s) fade-in forwards;
   margin-bottom: 0;
 }
 .second-section > div:first-of-type .navigation span::before {
@@ -648,8 +651,8 @@ hl {
   max-width: 1000px;
 }
 .second-section .navigation-contents .navigation-content.about-me .navigation-content-wrapper {
-  -webkit-animation: 1s 2.6s fade-in forwards;
-          animation: 1s 2.6s fade-in forwards;
+  -webkit-animation: 1s calc(var(--animationDelay) + 2.6s) fade-in forwards;
+          animation: 1s calc(var(--animationDelay) + 2.6s) fade-in forwards;
 }
 .second-section .navigation-contents .navigation-content-wrapper {
   opacity: 0;
@@ -1261,6 +1264,7 @@ hl {
   --font-second: "Inter Tight", "Arial";
   --font-third: "SF Mono", "Arial";
   --time: .5s;
+  --animationDelay: .7s;
 }
 
 .block.projects {
@@ -1752,6 +1756,9 @@ hl {
 }
 
 @media (min-width: 1200px) {
+  .navigation-content.contact .description.lets-talk .c-hyperlinks a:hover {
+    color: var(--font-color-third);
+  }
   .navigation-content.contact form {
     margin-top: 40px;
   }
@@ -1782,7 +1789,7 @@ hl {
   transition: 1s;
   cursor: pointer;
   opacity: 0;
-  animation: slide-show 0.5s 1s reverse forwards linear;
+  animation: slide-show 0.5s calc(var(--animationDelay) + 1s) reverse forwards linear;
   -webkit-transition: top 0s;
   transition: top 0s;
 }
@@ -1888,7 +1895,7 @@ hl {
   z-index: -1;
   opacity: 0;
   background: radial-gradient(rgba(53, 121, 255, 0.05) 0.1%, transparent, transparent);
-  animation: slide-show 0.5s 1.2s reverse forwards linear;
+  animation: slide-show 0.5s calc(var(--animationDelay) + 1s) reverse forwards linear;
 }
 
 @media (min-width: 1200px) {
