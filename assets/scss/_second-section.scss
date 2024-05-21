@@ -124,8 +124,8 @@
         .navigation {
             display: flex;
             flex-direction: column;
-            width: 60%; 
-            max-width: 200px; 
+            width: 60%;
+            max-width: 200px;
             height: auto;
             font-size: 1.1rem;
             font-weight: 600;
@@ -155,7 +155,7 @@
 
                 &:nth-of-type(3) {
                     animation: 1s calc(var(--animationDelay) + 2.4s) fade-in forwards;
-                    margin-bottom: 0; 
+                    margin-bottom: 0;
                 }
 
                 &::before {
@@ -351,7 +351,7 @@
 
                 &>ul {
                     display: none;
-                    margin: 100px 0 0 0; //
+                    margin: 100px 0 0 0;
                     opacity: 0;
                     animation: fade-in 1s forwards;
 
@@ -408,16 +408,16 @@
         background-image: url('../img/js-logo.png');
     }
 
+    &.typescript {
+        background-image: url('../img/typescript-logo.png');
+    }
+
     &.html {
         background-image: url('../img/html-logo.png');
     }
 
     &.css {
         background-image: url('../img/css-logo.png');
-    }
-
-    &.sql {
-        background-image: url('../img/sql-logo.png');
     }
 
     &.spring {
@@ -436,8 +436,8 @@
         background-image: url('../img/web-logo.png');
     }
 
-    &.hibernate {
-        background-image: url('../img/hibernate-logo.png');
+    &.angular {
+        background-image: url('../img/angular-logo.png');
     }
 
     &.playwright {
@@ -613,7 +613,7 @@
                             color: var(--font-color-third);
                             transition: color var(--time);
                         }
-                        
+
                         span {
                             font-size: 1.3rem;
                             color: var(--font-color-second);

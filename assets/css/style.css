@@ -901,14 +901,14 @@ hl {
 .icon.javascript {
   background-image: url("../img/js-logo.png");
 }
+.icon.typescript {
+  background-image: url("../img/typescript-logo.png");
+}
 .icon.html {
   background-image: url("../img/html-logo.png");
 }
 .icon.css {
   background-image: url("../img/css-logo.png");
-}
-.icon.sql {
-  background-image: url("../img/sql-logo.png");
 }
 .icon.spring {
   background-image: url("../img/spring-logo.png");
@@ -922,8 +922,8 @@ hl {
 .icon.web {
   background-image: url("../img/web-logo.png");
 }
-.icon.hibernate {
-  background-image: url("../img/hibernate-logo.png");
+.icon.angular {
+  background-image: url("../img/angular-logo.png");
 }
 .icon.playwright {
   background-image: url("../img/playwright-logo.png");
