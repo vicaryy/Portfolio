@@ -13,6 +13,11 @@ document.getElementById("input-message").addEventListener("focus", () => addActi
 document.getElementById("input-message").addEventListener("input", checkMessageInput);
 document.getElementById("input-message").addEventListener("blur", () => checkInputOnBlur(messageElement));
 
+submitElement.querySelector("input").addEventListener("click", (event) => {
+    if (!email && !message)
+        event.preventDefault();
+})
+
 function checkInputOnBlur(element) {
     if (element.firstElementChild.value === "")
         removeActiveClass(element);
@@ -44,5 +49,9 @@ function checkButtonActivate() {
     }
 }
 
+setTimeout(() => {
+    emailElement.querySelector("input").value = "";
+    messageElement.querySelector("textarea").value = "";
+}, 1000);
 let email = false;
 let message = false;

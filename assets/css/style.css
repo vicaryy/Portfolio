@@ -1769,7 +1769,7 @@ hl {
   .navigation-content.contact form > div:hover textarea {
     border: 2px solid var(--bgc-third);
   }
-  .navigation-content.contact form .submit.active:hover {
+  .navigation-content.contact form .submit.active input:hover {
     background-color: var(--bgc-second);
   }
 }

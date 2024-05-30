@@ -135,9 +135,9 @@
     .navigation-content.contact {
 
         .description.lets-talk {
-    
+
             .c-hyperlinks {
-    
+
                 a:hover {
                     color: var(--font-color-third);
                 }
@@ -146,6 +146,7 @@
 
         form {
             margin-top: 40px;
+
             &>div {
                 width: 90%;
 
@@ -160,8 +161,10 @@
 
             .submit {
                 &.active {
-                    &:hover {
-                        background-color: var(--bgc-second);
+                    input {
+                        &:hover {
+                            background-color: var(--bgc-second);
+                        }
                     }
                 }
             }

@@ -25,7 +25,7 @@
 <body>
     <div class="content">
         <div class="glow"></div>
-        <a href="assets/pdf/wiktorcholewa-cv_en.pdf" target="_blank" class="cv">
+        <a href="assets/pdf/wiktorcholewa-cv-en.pdf" target="_blank" class="cv">
             <span>getCV()</span>
             <div>
                 <i class="fa-solid fa-file-arrow-down"></i>
@@ -414,7 +414,7 @@
                                 <div class="c-hyperlinks">
                                     <a href="mailto:vicarycholewa@gmail.com" target="_blank"><i
                                             class="fa-solid fa-envelope"></i></a>
-                                    <a href="https://www.linkedin.com/in/wiktor-cholewa-ba1311179" target="_blank"><i
+                                    <a href="https://www.linkedin.com/in/wiktorcholewa" target="_blank"><i
                                             class=" fa-brands
                                     fa-linkedin"></i></a>
                                     <a href="https://t.me/vicary1" target="_blank"><i
@@ -425,15 +425,17 @@
                                     feel free to use the form
                                     below or the above hyperlinks. I'll be happy to respond in my free time! :)</p>
                             </div>
-                            <form action="">
+                            <form action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="4b948736-f8df-4c8c-b525-1acdb1742884">
                                 <div class="email">
-                                    <input type="text" id="input-email">
-                                    <span class="placeholder">Email</span>
+                                    <input type="text" name="email" id="input-email">
+                                    <span class="placeholder">Email*</span>
                                 </div>
                                 <div class="message">
-                                    <textarea id="input-message" cols="30" rows="10"></textarea>
-                                    <span class="placeholder">Message</span>
+                                    <textarea id="input-message" name="message" cols="30" rows="10"></textarea>
+                                    <span class="placeholder">Message*</span>
                                 </div>
+                                <div class="h-captcha" data-captcha="false"></div>
                                 <div class="submit">
                                     <input type="submit" value="send" disabled>
                                 </div>
