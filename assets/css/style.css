@@ -1305,6 +1305,9 @@ hl {
   -webkit-box-shadow: rgba(2, 12, 27, 0.7) 0px 20px 30px -15px;
           box-shadow: rgba(2, 12, 27, 0.7) 0px 20px 30px -15px;
 }
+.projects .project .p-photo .projects-photo {
+  cursor: pointer;
+}
 .projects .project .p-photo .projects-video {
   position: absolute;
   opacity: 0;

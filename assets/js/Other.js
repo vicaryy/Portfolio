@@ -66,3 +66,5 @@ document.querySelector(".projects-video-x-btn").addEventListener("click", () => 
         projectsVideoElement.appendChild(e)
     }, 1000)
 })
+
+document.querySelector("a.projects-photo").addEventListener("click", () => document.querySelector(".play-video-btn").click());

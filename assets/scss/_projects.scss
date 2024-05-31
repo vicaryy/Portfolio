@@ -29,6 +29,10 @@
 
         .p-photo {
 
+            .projects-photo {
+                cursor: pointer;
+            }
+
             .projects-video {
                 position: absolute;
                 opacity: 0;
